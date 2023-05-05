@@ -1,0 +1,196 @@
+:root {
+  --font-main: "LexendVariable", "Roboto", Helvetica, sans-serif;
+  --font-mono: "Victor Mono", monospace;
+  --bg: rgb(22, 22, 22);
+  --alt-bg: rgb(18, 18, 18);
+  --fg: rgb(236, 220, 238);
+  --secondary: rgb(179, 187, 242);
+  --primary: rgb(118, 151, 248);
+  --scrollbar-bg: rgb(10, 10, 10);
+  --scrollbar-fg: rgb(115, 96, 209);
+  --code-fg: var(--fg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-main);
+  margin: auto;
+  max-width: 720px;
+  padding: 1rem;
+}
+
+::selection {
+  color: var(--bg);
+  background: var(--primary);
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=1428987
+  text-decoration-color: var(--bg);
+}
+
+main {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: underline 2px;
+}
+
+a.anchor {
+  color: var(--fg);
+  text-decoration: underline 3px var(--bg);
+}
+
+a:hover {
+  text-decoration-color: var(--bg);
+}
+
+a:focus-visible {
+  background-color: var(--primary);
+  color: var(--bg);
+  outline: 3px solid var(--primary);
+  text-decoration: none;
+}
+
+a.anchor:focus-visible {
+  background: none;
+  color: var(--fg);
+  outline: none;
+}
+
+a.anchor:is(:focus-visible, :hover) {
+  text-decoration: underline 3px var(--primary);
+}
+
+a:focus-visible:hover {
+  text-decoration: underline 2px;
+}
+
+a.anchor:focus-visible:hover {
+  text-decoration: underline 3px;
+}
+
+sup {
+  // Stop footnotes from expanding the line they're on
+  line-height: 0;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--code-fg);
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+:not(pre) > code,
+pre[class*="language-"] {
+  background-color: var(--alt-bg);
+  overflow-x: auto;
+  scrollbar-color: var(--scrollbar-fg) var(--scrollbar-bg);
+}
+
+:not(pre) > code {
+  background-color: var(--alt-bg);
+  border-radius: 0.25rem;
+  border: 1px solid var(--primary);
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.125rem 0.25rem;
+  margin: 0 2px;
+}
+
+pre[class*="language-"] {
+  border: 2px solid var(--primary);
+  line-height: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+pre[class*="language-"] code {
+  font-size: 0.9375rem;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #d4d0ab;
+}
+
+.token.punctuation {
+  color: #fefefe;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff8eb3;
+}
+
+.token.boolean,
+.token.number {
+  color: #00e0e0;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #38e393;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #95c0ff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: #ffd700;
+}
+
+.token.keyword {
+  color: #00e0e0;
+}
+
+.token.regex,
+.token.important {
+  color: #ffd700;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
