@@ -16,7 +16,6 @@
     'pituitary-gla',
     'death-stra',
     'i-cant-sta',
-    'i-dont-like-sa',
     'aint-it-gra',
     'cobra-comma',
     'ampersa',
