@@ -39,7 +39,7 @@
   I am Andrew and I am a software developer writing web code, focusing on
   frontend and accessibility. All my work is proprietary so I don't have a lot
   to put here or in my github, whoops. I also like playing around with unix and
-  building my <a href="https://github.com/ndrooo/dot">NixOS configuration</a>. I
+  building my <a href="https://github.com/ndrooo/nix">NixOS configuration</a>. I
   live in New York City and I think birds are cool. You can email me at
   <a href="mailto:{emailPrefix}@ndr.ooo">{emailPrefix}@ndr.ooo</a>.
 </p>
