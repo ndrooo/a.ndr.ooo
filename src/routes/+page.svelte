@@ -31,6 +31,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>a.ndr.ooo</title>
+</svelte:head>
+
 <Header title="a.ndr.ooo" blurb="This is my website">
   <NavLink href="https://github.com/ndrooo">github</NavLink>
   <SrcLink />
