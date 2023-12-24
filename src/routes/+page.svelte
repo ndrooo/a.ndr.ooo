@@ -4,32 +4,15 @@
   import NavLink from '$lib/NavLink.svelte';
   import SrcLink from '$lib/SrcLink.svelte';
   import { onMount } from 'svelte';
+  import { emailPrefixes } from '$lib/consts.js';
 
   let emailPrefix = 'a';
-  let prefixes = [
-    'a',
-    'i-dont-understa',
-    'on-the-other-ha',
-    'in-dema',
-    'protected-wetla',
-    'a-bit-bla',
-    'land-and-expa',
-    'pituitary-gla',
-    'death-stra',
-    'i-cant-sta',
-    'aint-it-gra',
-    'cobra-comma',
-    'ampersa',
-    'wayla',
-    'fools-erra',
-    'were-an-american-ba',
-    'inline-spa'
-  ];
 
   export let data;
 
   onMount(() => {
-    emailPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+    emailPrefix =
+      emailPrefixes[Math.floor(Math.random() * emailPrefixes.length)];
   });
 </script>
 
