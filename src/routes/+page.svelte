@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { Note } from '$lib/types';
   import Header from '$lib/Header.svelte';
   import NavLink from '$lib/NavLink.svelte';
   import SrcLink from '$lib/SrcLink.svelte';
@@ -25,6 +26,8 @@
     'inline-spa'
   ];
 
+  export let data;
+
   onMount(() => {
     emailPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
   });
@@ -47,3 +50,12 @@
   >. I live in New York City and I think birds are cool. You can email me at
   <a href="mailto:{emailPrefix}@ndr.ooo">{emailPrefix}@ndr.ooo</a>.
 </p>
+
+{#if data.notes.length > 0}
+  <h2>Notes</h2>
+  <ul>
+    {#each data.notes as { title, date, href }}
+      <li><a {href}>{title} - {date}</a></li>
+    {/each}
+  </ul>
+{/if}
