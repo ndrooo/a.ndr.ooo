@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { Note } from '$lib/types';
   import Header from '$lib/Header.svelte';
   import NavLink from '$lib/NavLink.svelte';
   import SrcLink from '$lib/SrcLink.svelte';
