@@ -28,5 +28,5 @@ async function getNotes() {
 
 export async function GET() {
   const notes = await getNotes();
-  return json(notes.filter((note: Note) => note.tags.includes('home')));
+  return json(notes.filter((note: Note) => note.tags && note.tags.includes('home')));
 }
