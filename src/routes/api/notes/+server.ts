@@ -10,8 +10,9 @@ async function getNotes() {
     const file = paths[path];
 
     if (file && typeof file === 'object' && 'metadata' in file) {
+      const href = path.replace(/^\/src\/notes\//, "").replace(/\.[^/.]+$/, "");
       const note: Note = {
-        href: path,
+        href,
         ...(file.metadata as Omit<Note, 'href'>)
       };
       notes.push(note);
