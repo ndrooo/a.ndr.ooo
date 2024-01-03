@@ -97,14 +97,14 @@ pre[class*="language-"] {
   word-wrap: normal;
 }
 
-:not(pre) > code,
+:not(pre)>code,
 pre[class*="language-"] {
   background-color: var(--alt-bg);
   overflow-x: auto;
   scrollbar-color: var(--scrollbar-fg) var(--scrollbar-bg);
 }
 
-:not(pre) > code {
+:not(pre)>code {
   background-color: var(--alt-bg);
   border-radius: 0.25rem;
   border: 1px solid var(--primary);
@@ -116,7 +116,7 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  border: 2px solid var(--primary);
+  border: 3px solid var(--primary);
   line-height: 1.5rem;
   padding: 1rem 1.5rem;
 }

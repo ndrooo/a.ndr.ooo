@@ -8,6 +8,7 @@
 
 <style lang="scss">
   a {
+    background-color: var(--alt-bg);
     border: 3px solid var(--primary);
     outline: none;
     padding: 0.5rem;
