@@ -35,9 +35,35 @@
 
 {#if data.notes.length > 0}
   <h2>Notes</h2>
-  <ul>
-    {#each data.notes as { title, date, href }}
-      <li><a {href}>{title} - {date}</a></li>
-    {/each}
-  </ul>
+  {#each data.notes as { title, blurb, date, href }}
+    <div class="card">
+      <a {href}><h3>{title}</h3></a>
+      {#if blurb}
+        <p class="blurb">{blurb}</p>
+      {/if}
+      <p>Updated {date}</p>
+    </div>
+  {/each}
 {/if}
+
+<style lang="scss">
+  .card {
+    background-color: var(--alt-bg);
+    border: 3px solid var(--primary);
+    padding: 0 1rem;
+    line-height: 1rem;
+  }
+
+  .card:focus-within {
+    background-color: var(--primary);
+    color: var(--bg);
+
+    & .blurb {
+      color: var(--bg);
+    }
+  }
+
+  .card .blurb {
+    color: var(--secondary);
+  }
+</style>
