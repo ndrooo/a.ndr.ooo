@@ -2,8 +2,7 @@ export let emailPrefixes = [
   'a',
   'i-dont-understa',
   'on-the-other-ha',
-  'in-dema',
-  'protected-wetla',
+  'native-wetla',
   'a-bit-bla',
   'land-and-expa',
   'pituitary-gla',
@@ -14,6 +13,6 @@ export let emailPrefixes = [
   'ampersa',
   'wayla',
   'fools-erra',
-  'were-an-american-ba',
+  'big-ba',
   'inline-spa'
 ];

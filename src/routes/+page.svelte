@@ -1,10 +1,8 @@
 <script lang="ts">
   import Header from '$lib/Header.svelte';
   import NavLink from '$lib/NavLink.svelte';
-  import SrcLink from '$lib/SrcLink.svelte';
   import { onMount } from 'svelte';
   import { emailPrefixes } from '$lib/consts.js';
-  import NoteCard from '$lib/NoteCard.svelte';
 
   let emailPrefix = 'a';
 
@@ -22,21 +20,32 @@
 
 <Header title="a.ndr.ooo" blurb="This is my website">
   <NavLink href="https://github.com/ndrooo">github</NavLink>
-  <SrcLink />
+  <NavLink href="https://www.instagram.com/a.ndr.ooo">photography</NavLink>
 </Header>
 <p>
-  I am Andrew and I am a software developer writing web code, focusing on
-  frontend and accessibility. All my work is proprietary so I don't have a lot
-  to put here or in my Github. I also like game development, fooling around with
-  unix tools, and building my <a href="https://github.com/ndrooo/nix"
-    >NixOS configuration</a
-  >. I live in New York City and I think birds are cool. You can email me at
-  <a href="mailto:{emailPrefix}@ndr.ooo">{emailPrefix}@ndr.ooo</a>.
+  I am Andrew! I am a software developer and curious person living in New York
+  City. For work I build websites and I am particularly focused on making them
+  accessible. When I feel like writing software for fun I dabble in game
+  development, mess around with various things in Unix-world, and continuously
+  improve my <a href="https://github.com/ndrooo/nix">NixOS configuration</a>.
 </p>
-
-{#if data.notes.length > 0}
-  <h2>Notes</h2>
-  {#each data.notes as note}
-    <NoteCard {...note} />
-  {/each}
-{/if}
+<p>
+  Sometimes I rebuild
+  <a href="https://github.com/ndrooo/a.ndr.ooo"
+    >the website you're currently on</a
+  > unnecessarily. Do I need to have a website in the first place? Probably not.
+  But it's fun to have a website!
+</p>
+<p>
+  I'm a gardener too, and a birder. I'm interested in ecology, in the complex
+  interactions that make up nature, and in how human beings can take care of and
+  even enrich that world. I like making things and have messed a bit with
+  electronics and fabrication. I have a physics background which sort of helps
+  with that. I'm very interested in home electrification, and in how we can
+  reduce the waste that comes with the way we live.
+</p>
+<p>
+  You can email me at <a href="mailto:{emailPrefix}@ndr.ooo"
+    >{emailPrefix}@ndr.ooo</a
+  >.
+</p>
