@@ -33,8 +33,10 @@
   Sometimes I rebuild
   <a href="https://github.com/ndrooo/a.ndr.ooo"
     >the website you're currently on</a
-  > unnecessarily. Do I need to have a website in the first place? Probably not.
-  But it's fun to have a website!
+  >
+  unnecessarily. Do I need to have a website in the first place? Probably not.
+  But it's fun to have a website! It's built in
+  <a href="https://kit.svelte.dev/">SvelteKit</a>.
 </p>
 <p>
   I'm a gardener too, and a birder. I'm interested in ecology, in the complex
