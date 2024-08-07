@@ -1,7 +1,7 @@
 ---
 title: Nix & Rust & VSCode
 ---
-Let’s go through setup for a modern Rust development environment using [Nix](https://nixos.org/) and [VSCode](https://code.visualstudio.com/). We’ll get a deterministic environment that should deploy more or less identically on any machine, and it will auto-initialize any time you open your project. For bonus points we’ll make it all work with Bevy Engine.
+Let’s go through setup for a modern Rust development environment using [Nix](https://nixos.org/) and [VSCode](https://code.visualstudio.com/). We’ll get a deterministic environment that should deploy more or less identically on any machine, and it will auto-initialize any time you open your project.
 
 This guide is aimed at developers who already have installed Nix or NixOS and understand the basics. If not, start with [nix.dev](https://nix.dev). It also assumes basic knowledge of Rust, Cargo, and VSCode. The focus will be on how to smoothly combine those technologies.
 
