@@ -23,7 +23,7 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Besley",
-        body: "Lexend",
+        body: "Atkinson Hyperlegible",
         code: "Victor Mono",
       },
       colors: {
