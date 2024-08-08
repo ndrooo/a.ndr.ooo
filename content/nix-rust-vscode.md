@@ -8,7 +8,7 @@ Let’s go through setup for a modern Rust development environment using [Nix](h
 This guide is aimed at developers who already have installed Nix or NixOS and understand the basics. If not, start with [nix.dev](https://nix.dev). It also assumes basic knowledge of Rust, Cargo, and VSCode. The focus will be on how to smoothly combine those technologies.
 
 An important note: this guide uses Nix Flakes and the `nix` command, which are experimental features. The [Flakes wiki page](https://nixos.wiki/wiki/Flakes) should have information on how to enable those.
-# Install some tools globally
+## Install some tools globally
 
 First, there are a few tools we’ll need to install into our Nix system. The first is [direnv](https://direnv.net/), which will load our execution environment from the repository we’re working in. Where you will install this depends on your Nix setup, but it will probably look something like this:
 
@@ -37,7 +37,7 @@ environment.systemPackages = with pkgs; {
 ```
 
 We’ll install the basic extensions we need for Nix and Rust right off the bat. Most important here is `rust-analyzer`, which does all the heavy lifting in code highlighting and analysis.
-# Using flakes to make a Rust devshell
+## Using flakes to make a Rust devshell
 
 Next, we’ll start setting up our repository. To start with, we’ll need to actually make our repository. There are a few ways to do this, including just starting with a template, but I think it is usually safe to install Rust globally on your Nix machine (with the `rustc` and `cargo` packages) and then run something like `cargo new nameofproject`. After doing the rest of the setup you won’t actually need this global Rust install but it may be handy to keep around. Not to worry, our setup will automagically use the correct Rust toolchain!
 
@@ -95,7 +95,7 @@ sha256 = "sha256-L3tt3r54ndNumb3r5=";
 
 Now with another `nix develop` you should eventually be taken into a configured development shell!
 
-# Put it all together in vscode
+## Put it all together in vscode
 
 Next, we’ll set up VSCode to use our new environment. First we’ll need a couple more extensions: [direnv](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) to deploy our environment and [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) for Rust hints and errors. If you’re using `vscode-with-extensions` you’ll download these by adding two lines to the extension list:
 
@@ -116,6 +116,6 @@ By default, the rust-analyzer extension uses a version of the rust-analyzer tool
 
 While you’re at it, changing `rust-analyzer.check.command` to `"clippy"` will give you lints from [Clippy](https://github.com/rust-lang/rust-clippy), which can help you improve your Rust code substantially.
 
-## Addendum: debugging
+### Addendum: debugging
 
 To debug with VSCode you’ll need the [codelldb](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) extension, which you can install in `vscode-with-extensions` by adding `vadimcn.vscode-lldb`. Due to the way Nix handles code linking, this only seems to work properly when using the `vscode-with-extensions` method. If there is a way to make this work when installing from the marketplace, [let me know](https://github.com/ndrooo/a.ndr.ooo/issues/new).
