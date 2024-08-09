@@ -4,8 +4,8 @@ node_modules
 public
 prof
 tsconfig.tsbuildinfo
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+garden/.obsidian/workspace.json
+garden/.obsidian/workspace-mobile.json
 .quartz-cache
 private/
 .replit
