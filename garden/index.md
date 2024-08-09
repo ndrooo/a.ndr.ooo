@@ -11,5 +11,5 @@ You can contact me at a@ndr.ooo.
 
 ## Guides
 These are my attempt at slightly more in depth tutorials on how to do one thing or another. They might evolve though!
-- [[nix-rust-vscode|Nix & Rust & VSCode]]
-- [[nix-bevy-vscode|Nix & Bevy & VSCode]]
+- [[Nix & Rust & VSCode]]
+- [[Nix & Bevy & VSCode]]

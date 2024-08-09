@@ -1,5 +1,4 @@
 ---
-title: Nix & Rust & VSCode
 tags:
   - guide
 ---
