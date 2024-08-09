@@ -8,9 +8,18 @@ const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
 
   return (
     <article class="popover-hint">
-      <h1>404</h1>
-      <p>{i18n(cfg.locale).pages.error.notFound}</p>
-      <a href={baseDir}>{i18n(cfg.locale).pages.error.home}</a>
+      <h1>Still growing...</h1>
+      <p>
+        My <a href="/Digital-garden">digital garden</a> doesn't have a note for this yet. Empty
+        links are important! They represent the areas in which I'd like to expand my knowledge or
+        writing.
+      </p>
+      <p>
+        However, if you're curious about my thoughts on this topic, you can{" "}
+        <a href="mailto:a@ndr.ooo">email me</a> or{" "}
+        <a href="https://github.com/ndrooo/garden/issues">file an issue</a>.
+      </p>
+      <a href={baseDir}>Go home 🏠</a>
     </article>
   )
 }
