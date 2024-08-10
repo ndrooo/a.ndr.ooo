@@ -7,6 +7,8 @@ A lot of web developers don't know where to start making their UIs [[Web accessi
 
 > [!tip] If you're looking for an easy way to contribute to open source...
 > Look no further! Lots of mid-size web projects will have issues you can find with this audit, and the tasks here (small, self contained fixes) are great for learning web development.
+## A word on automated tests and manual audits
+Automated accessibility tests like [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) are a great tool, especially for regression testing! However, they don't remotely tell the full story. Anecdotally, I've encountered plenty of pages with >90 on Lighthouse which were almost completely unusable for e.g. a screen reader user. This is because these audits don't have any information the page doesn't give them. They can tell you that some attribute should never go on some element, but if that element isn't the correct element in the first place, they will pass like nothing is wrong. These tests will catch plenty of bugs, but there will be scores more to be caught quickly by a human being with a brain and a checklist.
 ## The tab test
 The absolute most straightforward manual accessibility test! You don't need the developer console, you don't need to run a screen reader or any other assistive technology. These instructions are written for people without vision impairments but if you're blind or vision-impaired you can do a lot of this with a screen reader too.
 
