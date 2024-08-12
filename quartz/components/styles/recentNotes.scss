@@ -13,11 +13,12 @@
       margin: 1rem 0;
       .section > .desc > h3 > a {
         background-color: transparent;
+        font-size: 1rem;
       }
 
       .section > .meta {
+        color: var(--gray);
         margin: 0 0 0.5rem 0;
-        opacity: 0.6;
       }
     }
   }
