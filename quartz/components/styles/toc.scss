@@ -52,12 +52,12 @@ button#toc {
     padding: 0;
     & > li > a {
       color: var(--dark);
-      opacity: 0.35;
+      opacity: 0.6;
       transition:
         0.5s ease opacity,
         0.3s ease color;
       &.in-view {
-        opacity: 0.75;
+        opacity: 1;
       }
     }
   }
