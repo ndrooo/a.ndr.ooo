@@ -18,7 +18,7 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
-    Component.ContentMeta({showReadingTime: false}),
+    Component.ContentMeta({ showReadingTime: false }),
     Component.TagList(),
   ],
   left: [
@@ -26,23 +26,20 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.DesktopOnly(Component.RecentNotes({showTags: false})),
+    Component.DesktopOnly(
+      Component.RecentNotes({
+        title: "Recent",
+        showTags: false,
+        filter: (f) => !f.slug!.startsWith("tags"),
+      }),
+    ),
   ],
-  right: [
-    Component.Backlinks(),
-  ],
+  right: [Component.Backlinks()],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [
-    Component.ArticleTitle(),
-    Component.ContentMeta({showReadingTime: false})
-  ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-  ],
+  beforeBody: [Component.ArticleTitle(), Component.ContentMeta({ showReadingTime: false })],
+  left: [Component.PageTitle(), Component.MobileOnly(Component.Spacer()), Component.Search()],
   right: [],
 }
