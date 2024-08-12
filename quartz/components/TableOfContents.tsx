@@ -33,7 +33,7 @@ const TableOfContents: QuartzComponent = ({
         aria-controls="toc-content"
         aria-expanded={!fileData.collapseToc}
       >
-        <h3>{i18n(cfg.locale).components.tableOfContents.title}</h3>
+        <h3>Outline</h3>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
