@@ -1,6 +1,7 @@
 ---
 tags:
   - guide
+  - nix
 ---
 Let’s go through setup for a modern Rust development environment using [Nix](https://nixos.org/) and [VSCode](https://code.visualstudio.com/). We’ll get a deterministic environment that should deploy more or less identically on any machine, and it will auto-initialize any time you open your project.
 

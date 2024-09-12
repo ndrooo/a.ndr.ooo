@@ -1,0 +1,5 @@
+---
+tags:
+  - nix
+draft: true
+---

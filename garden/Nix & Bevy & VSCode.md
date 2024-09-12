@@ -1,6 +1,7 @@
 ---
 tags:
   - guide
+  - nix
 ---
 I’ve been enjoying game development in [Bevy Engine](https://bevyengine.org/) lately, but figuring out how to adapt the setup to Nix + VSCode took a little work. So let’s take [[Nix & Rust & VSCode|our Rust setup]] and add what we need for Bevy! Hopefully this will also serve as a good example for how we might extend our environment more generally. This section mostly adapts the [Bevy setup instructions](https://bevyengine.org/learn/book/getting-started/setup/) to this environment.
 
