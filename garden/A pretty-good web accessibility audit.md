@@ -20,7 +20,7 @@ Every time you hit <kbd>tab</kbd>, you should be able to tell that you've moved 
 
 The most common issue here is that a developer has set `outline: none` on an element or used `all: unset`. Get rid of that or add a custom highlight with [good color contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) and you're ready to go!
 ### Is it interactive?
-This is often misunderstood, but the rule is straightforward. If you can [[Interactability|interact]] with it, it should be in the focus order. If you can't, it shouldn't be. That means clicking, typing, arrow keys, whatever. Plenty of "important" but non-interactive elements won't be in the tab order, and they shouldn't be! The focus order exists for mobility-impaired users, and users with different needs (e.g. blind users) have different ways of getting around.
+This is often misunderstood, but the rule is straightforward. If you can [[Interactivity|interact]] with it, it should be in the focus order. If you can't, it shouldn't be. That means clicking, typing, arrow keys, whatever. Plenty of "important" but non-interactive elements won't be in the tab order, and they shouldn't be! The focus order exists for mobility-impaired users, and users with different needs (e.g. blind users) have different ways of getting around.
 
 > [!warning] Important caveat!
 > It's sometimes okay for an interactive element to be reachable by basic keyboard interactions. For example, you may only be able to tab to the first element of a checklist, but you can use the arrow keys to get to the other elements. That's fine, and can be a better experience!
@@ -28,7 +28,7 @@ This is often misunderstood, but the rule is straightforward. If you can [[Inter
 If elements are in the focus order that aren't interactive, it's annoying and confusing. If elements that are interactive are not in the focus order, they are broken! Make sure you check both.
 
 > [!tip] Three slightly less important caveats!
-> 1. If something (e.g. a button) would normally be interactive but it's disabled for some temporary reason, it's usually okay for it to be in the focus order.
+> 1. If something (e.g. a button) would normally be interactive but it's [[Disabled elements|disabled]] for some temporary reason, it's usually okay for it to be in the focus order.
 > 2. Things in a page that can only be interacted with by hovering on them, like a "more info" tooltip, might need to be in the focus order because a keyboard-only user won't otherwise have a way to perform that interaction. That's okay, but this is usually a case you should try to avoid completely when developing a UI.
 > 3. Scrolling is complicated, sorry.
 
