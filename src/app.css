@@ -3,20 +3,18 @@
 }
 
 :root {
-	--background: rgb(11, 13, 18);
-	--surface: #192239;
-	--subhead: #8484c4;
-	--foreground: rgb(236, 220, 238);
-	--primary: #8fa5f5;
-	--secondary: #9270d7;
-	--tertiary: #00bfa5;
-	--highlight: #192239;
-	--textHighlight: #b3aa0288;
+	--background: #0a0a0a;
+	--surface: #222;
+	--foreground: #ccc;
+	--link: #999;
+	--accent: #3a625b;
+	--heading: hsl(170, 26%, 43%);
 
 	--scale-ratio: 1.5;
 	--s0: 1.15rem;
 	--s1: calc(var(--s0) * var(--scale-ratio));
 	--s2: calc(var(--s1) * var(--scale-ratio));
+	--s3: calc(var(--s2) * var(--scale-ratio));
 }
 
 body {
@@ -28,30 +26,65 @@ body {
 	margin: 0 auto;
 }
 
+::selection {
+	background-color: var(--surface);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	color: var(--secondary);
-	font-family: 'Besley Variable', serif;
+	color: var(--heading);
+	hyphens: auto;
+	margin-block-start: 0;
+
+	&::selection {
+		background-color: var(--heading);
+		color: var(--background);
+	}
 }
 
 h1 {
 	font-size: 2.25rem;
+	margin-block-end: 0;
+}
+
+nav {
+	border-bottom: 2px solid var(--accent);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+	a {
+		line-height: 1.2;
+		padding: 0.2rem;
+		text-decoration: none;
+	}
 }
 
 a {
-	color: var(--primary);
-	background-color: var(--surface);
-	border-radius: 0.25rem;
+	color: var(--link);
+	outline: none;
 	padding: 0.1rem;
-	text-decoration: none;
+	text-decoration: underline 2px var(--accent);
+	transition: text-decoration-thickness 0.3s;
 
 	&:hover {
-		color: var(--tertiary);
+		background-color: var(--surface);
+		text-decoration-thickness: 3px;
 	}
+
+	&:focus-visible {
+		background-color: var(--accent);
+		color: var(--background);
+		text-decoration-color: var(--background);
+	}
+}
+
+b {
+	font-weight: 550;
 }
 
 code {
@@ -60,26 +93,25 @@ code {
 	padding: 0.15rem;
 	font-family: 'Atkinson Hyperlegible Mono Variable', monospace;
 	font-size: 0.9rem;
-}
 
-.sidebar-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.sidebar {
-	display: flex;
-	flex-flow: row wrap;
-	flex-basis: 2rem;
-	flex-grow: 1;
-}
-
-.sidebar-content {
-	flex-basis: 0;
-	flex-grow: 999;
-	min-inline-size: 90%;
+	&::selection {
+		background-color: var(--accent);
+		color: var(--background);
+	}
 }
 
 .text-container :nth-child(1) {
 	margin-block-start: 0;
+}
+
+ul.lines-list {
+	padding: 0;
+	li {
+		list-style-type: none;
+		padding-block: 0.3rem;
+
+		&:not(:last-child) {
+			border-block-end: 2px solid var(--accent);
+		}
+	}
 }

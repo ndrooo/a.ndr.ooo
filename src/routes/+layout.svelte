@@ -1,29 +1,21 @@
 <script lang="ts">
 	import '@fontsource-variable/atkinson-hyperlegible-mono';
 	import '@fontsource-variable/atkinson-hyperlegible-next';
-	import '@fontsource-variable/besley';
 	import '../app.css';
-	import Header from '$lib/Header.svelte';
+	import Nav from '$lib/Nav.svelte';
 
 	let { children } = $props();
 </script>
 
-<div class="sidebar-wrapper">
-	<Header class="sidebar"/>
-	<div class="sidebar-content">
-		<div class="content text-container">
-			{@render children()}
-		</div>
-	</div>
+<div class="content">
+	<Nav />
+	{@render children()}
 </div>
 
 <style>
 	.content {
 		margin-inline: auto;
-		max-inline-size: 60ch;
-		padding: var(--s1) 3rem;
-		box-shadow:
-			26px 26px 52px #040507,
-			-26px -26px 52px #12151d;
+		max-inline-size: 80ch;
+		padding: var(--s1) var(--s3);
 	}
 </style>
