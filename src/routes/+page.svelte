@@ -4,19 +4,13 @@
 
 <h1>a.ndr.ooo</h1>
 
-<p>This is an intro section</p>
-<p>Look at my <a href="/web-a11y-audit">web accessibility audit</a>!</p>
+<p>This page is under construction...</p>
+<p>I hope to have more here soon, including my <a href="/web-a11y-audit">web accessibility audit</a>.</p>
 
 <h2>about</h2>
 <p>I'm <b>Andrew</b>, a software developer and curious person in New York City. To make money I build <b>websites</b> and I am particularly focused on making them <b>accessible</b>. When I feel like writing software for fun I build <b>different websites</b>, dabble in <b>game development</b>, mess around with <b>Unix</b>, and continuously improve my <a href="https://github.com/ndrooo/nix">NixOS configuration</a>.</p>
-<p>I am a <b>gardener</b> of the home and community variety, I'm a <b>birder</b>, and I enjoy learning anything I can about <b>ecology</b>. I like <b>crosswords</b> and other puzzles, and I'm trying to learn how to make them. I dabble in <b>electronics and fabrication</b>. I'm very interested in <b>home electrification</b> and <b>climate tech</b> as well.</p>
+<p>I am a <b>gardener</b> of the home and community variety, I'm a <b>birder</b>, and I enjoy learning anything I can about <b>ecology</b>. I know an immense amount about <b>tea</b> and I do like to drink it sometimes as well. I like <b>crosswords</b> and other puzzles, and I'm trying to learn how to make them. I dabble in <b>electronics and fabrication</b>. I'm very interested in <b>home electrification</b> and <b>climate tech</b> as well.</p>
 <p>You can contact me at <a href="mailto:a@ndr.ooo">a@ndr.ooo</a>.</p>
 
-<h2>writing</h2>
-<p>Here are links to some other stuff</p>
-
-<h2>webring</h2>
-<ul class="lines-list">
-    <li><a href="https://wikipedia.org">Example</a> - website one</li>
-    <li><a href="https://wikipedia.org">Example</a> - another website</li>
-</ul>
+<h2>colophon</h2>
+<p>This website is built with <a href="https://svelte.dev/">Svelte</a>, <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, and <a href="https://mdsvex.pngwn.io/">mdsvex</a>. The source is available on <a href="https://github.com/ndrooo/a.ndr.ooo">GitHub</a> and the page is hosted on <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>. The font is <a href="https://www.brailleinstitute.org/freefont/">Atkinson Hyperlegible</a>. This bit down here is a <a href="https://en.wikipedia.org/wiki/Colophon_(publishing)">colophon</a>.</p>
