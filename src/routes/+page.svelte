@@ -5,7 +5,7 @@
 <h1>a.ndr.ooo</h1>
 
 <p>This page is under construction...</p>
-<p>I hope to have more here soon, including my <a href="/web-a11y-audit">web accessibility audit</a>.</p>
+<p>I hope to have more here soon, including my <a href="/a11y-audit">web accessibility audit</a>.</p>
 
 <h2>about</h2>
 <p>I'm <b>Andrew</b>, a software developer and curious person in New York City. To make money I build <b>websites</b> and I am particularly focused on making them <b>accessible</b>. When I feel like writing software for fun I build <b>different websites</b>, dabble in <b>game development</b>, mess around with <b>Unix</b>, and continuously improve my <a href="https://github.com/ndrooo/nix">NixOS configuration</a>.</p>
