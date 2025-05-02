@@ -7,16 +7,9 @@
 	let { children } = $props();
 </script>
 
-<div class="content">
+<div class="content-box">
 	<Nav />
-	{@render children()}
+	<main>
+		{@render children()}
+	</main>
 </div>
-
-<style>
-	.content {
-		margin-inline: auto;
-		max-inline-size: 75ch;
-		padding-block: var(--s1);
-		padding-inline: clamp(var(--s0), 5vw, var(--s3));
-	}
-</style>
