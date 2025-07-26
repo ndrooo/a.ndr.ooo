@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--background: #0a0a0a;
+	--surface: #222;
+	--foreground: #ccc;
+	--link: #999;
+	--accent: #3a625b;
+	--heading: hsl(170, 26%, 43%);
+
+	--scale-ratio: 1.5;
+	--s0: 1.15rem;
+	--s1: calc(var(--s0) * var(--scale-ratio));
+	--s2: calc(var(--s1) * var(--scale-ratio));
+	--s3: calc(var(--s2) * var(--scale-ratio));
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: 'Atkinson Hyperlegible Next Variable';
+	font-size: var(--s0);
+	line-height: var(--scale-ratio);
+	margin: 0 auto;
+}
+
+::selection {
+	background-color: var(--surface);
+}
+
+.content-box {
+	margin-inline: auto;
+	max-inline-size: 75ch;
+	padding-block: var(--s1);
+	padding-inline: clamp(var(--s0), 5vw, var(--s3));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--heading);
+	hyphens: auto;
+	margin-block-start: 0;
+
+	&::selection {
+		background-color: var(--heading);
+		color: var(--background);
+	}
+}
+
+h1 {
+	font-size: 2.25rem;
+	margin-block-end: 0;
+}
+
+nav {
+	border-bottom: 2px solid var(--accent);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+	a {
+		line-height: 1.2;
+		font-weight: 450;
+		padding: 0.2rem;
+		text-decoration: none;
+	}
+}
+
+a {
+	color: var(--link);
+	outline: none;
+	padding: 0.1rem;
+	text-decoration: underline 2px var(--accent);
+	transition: text-decoration-thickness 0.3s;
+
+	&:hover {
+		background-color: var(--surface);
+		text-decoration-thickness: 3px;
+	}
+
+	&:focus-visible {
+		background-color: var(--accent);
+		color: var(--background);
+		text-decoration-color: var(--background);
+	}
+}
+
+b {
+	font-weight: 550;
+}
+
+code {
+	background-color: var(--surface);
+	border-radius: 0.25rem;
+	padding: 0.15rem;
+	font-family: 'Atkinson Hyperlegible Mono Variable', monospace;
+	font-size: 0.9rem;
+
+	&::selection {
+		background-color: var(--accent);
+		color: var(--background);
+	}
+}
+
+.text-container :nth-child(1) {
+	margin-block-start: 0;
+}
+
+ul.lines-list {
+	padding: 0;
+	li {
+		list-style-type: none;
+		padding-block: 0.5rem;
+		padding-inline: 1rem;
+
+		&:not(:last-child) {
+			border-block-end: 2px groove var(--accent);
+		}
+	}
+}

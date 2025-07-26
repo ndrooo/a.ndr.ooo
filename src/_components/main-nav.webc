@@ -1,0 +1,4 @@
+<nav>
+	<a href="/" :aria-current="page.url === '/'">go-home</a>
+	<a href="https://github.com/ndrooo/a.ndr.ooo">view-source</a>
+</nav>
