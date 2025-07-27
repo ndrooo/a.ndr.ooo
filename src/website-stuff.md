@@ -32,7 +32,8 @@ A very loose collection of some resources I've found helpful in building hobby a
 
 ## Guides and tutorials
 <div class="lines-list">
-    <li><a href="https://www.youtube.com/watch?v=_tWh4cYCTv0">shar - how i made my website</a></li>
+
+- [shar - how i made my website](https://www.youtube.com/watch?v=_tWh4cYCTv0)
 </div>
 
 
@@ -43,7 +44,7 @@ A very loose collection of some resources I've found helpful in building hobby a
 - [Molly White's website](https://www.mollywhite.net/)
 - [Steph Ango's website](https://stephango.com/)
 - [Shar Yap's website](https://www.sharyap.com/)
-- <a href="https://getoutofmyhead.dev/">Get out of my <code>&lt;head&gt;</code></a>
+- [Get out of my `<head>`](https://getoutofmyhead.dev/)
 - [endtimes.dev](https://endtimes.dev/)
 - [Jack's Homepage](https://www.jackis.online/)
 - [Everest Pipkin's website](https://everest-pipkin.com/#)
