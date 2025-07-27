@@ -8,13 +8,14 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addPassthroughCopy("./src/fonts/");
-  eleventyConfig.addPassthroughCopy({"./static/*": "/"});
+  eleventyConfig.addPassthroughCopy({ "./static/*": "/" });
 
   return {
     dir: {
       input: "src",
-      output: "public"
+      output: "public",
     },
-    markdownTemplateEngine: "webc"
+    htmlTemplateEngine: "webc",
+    markdownTemplateEngine: "webc",
   };
-};
+}
