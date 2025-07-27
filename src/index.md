@@ -6,6 +6,7 @@ title: a.ndr.ooo
 # a.ndr.ooo
 
 Welcome to my web page! Here are some links:
+
 <lines-list>
 - Some [website-related resources](website-stuff) I've collected for people making personal or hobby websites
 - **(Under construction)** A [web accessibility audit](/a11y-audit) for beginners, to catch the biggest access issues in your website
@@ -21,15 +22,4 @@ You can contact me at [a@ndr.ooo](mailto:a@ndr.ooo).
 ## colophon
 This **website** is built with [Svelte](https://svelte.dev/), [SvelteKit](https://svelte.dev/docs/kit/introduction), and [mdsvex](https://mdsvex.pngwn.io/). The **source code** is available on [GitHub](https://github.com/ndrooo/a.ndr.ooo) and the page is hosted on [Cloudflare Pages](https://pages.cloudflare.com/). The **font** is [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/). This is a [colophon](https://indieweb.org/colophon), which explains how the website is made in case you want to **build something similar**. You can **copy** whatever you want because it's all [MIT licensed](https://github.com/ndrooo/a.ndr.ooo/blob/main/LICENSE).
 
-<footer>
-  <a href="https://pzone.ndr.ooo/androoo/prev" aria-label="Previous site in ring">&larr;</a>
-  [Party Zone Webring](https://pzone.ndr.ooo)
-  <a href="https://pzone.ndr.ooo/androoo/next" aria-label="Next site in ring">&rarr;</a>
-</footer>
-
-<style>
-  footer {
-    display: flex;
-    justify-content: center;
-  }
-</style>
+<webring-footer></webring-footer>

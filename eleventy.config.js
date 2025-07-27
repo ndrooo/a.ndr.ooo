@@ -15,5 +15,6 @@ export default function (eleventyConfig) {
       input: "src",
       output: "public"
     },
+    markdownTemplateEngine: "webc"
   };
 };

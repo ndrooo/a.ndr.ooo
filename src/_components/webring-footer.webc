@@ -1,0 +1,12 @@
+<footer>
+  <a href="https://pzone.ndr.ooo/androoo/prev" aria-label="Previous site in ring">&larr;</a>
+  <a href="https://pzone.ndr.ooo">Party Zone Webring</a>
+  <a href="https://pzone.ndr.ooo/androoo/next" aria-label="Next site in ring">&rarr;</a>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+</style>
