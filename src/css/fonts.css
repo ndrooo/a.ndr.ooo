@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local(''),
+    url('fonts/atkinson-hyperlegible-next-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: italic;
+  font-display: swap;
+  src:
+    local(''),
+    url('fonts/atkinson-hyperlegible-next-wght-italic.woff2') format('woff2');
+}
