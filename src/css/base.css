@@ -112,8 +112,11 @@ code {
 	margin-block-start: 0;
 }
 
-ul.lines-list {
-	padding: 0;
+.lines-list {
+    display: contents;
+    ul {
+        padding: 0;
+    }
 	li {
 		list-style-type: none;
 		padding-block: 0.5rem;

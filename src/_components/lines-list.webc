@@ -1,7 +1,0 @@
-<div style="display: contents;" @raw="content"></div>
-
-<style>
-    li {
-        color: red;
-    }
-</style>
