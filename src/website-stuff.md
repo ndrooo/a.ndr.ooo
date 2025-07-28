@@ -44,7 +44,7 @@ A very loose collection of some resources I've found helpful in building hobby a
 - [Molly White's website](https://www.mollywhite.net/)
 - [Steph Ango's website](https://stephango.com/)
 - [Shar Yap's website](https://www.sharyap.com/)
-- [Get out of my `<head>`](https://getoutofmyhead.dev/)
+- [Get out of my &lt;head&gt;](https://getoutofmyhead.dev/)
 - [endtimes.dev](https://endtimes.dev/)
 - [Jack's Homepage](https://www.jackis.online/)
 - [Everest Pipkin's website](https://everest-pipkin.com/#)
