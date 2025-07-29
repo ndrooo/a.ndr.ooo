@@ -2,18 +2,21 @@ import pluginWebc from "@11ty/eleventy-plugin-webc";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc, {
-    components: "src/_components/**/*.webc",
+    components: "components/**/*.webc",
   });
 
-  eleventyConfig.addPassthroughCopy("./src/css/");
-  eleventyConfig.addWatchTarget("./src/css/");
-  eleventyConfig.addPassthroughCopy("./src/fonts/");
-  eleventyConfig.addPassthroughCopy({ "./static/*": "/" });
+  eleventyConfig.addPassthroughCopy("./css/");
+  eleventyConfig.addWatchTarget("./css/");
+  eleventyConfig.addPassthroughCopy({
+    "static/*": "/",
+    "static/fonts": "fonts",
+  });
 
   return {
     dir: {
-      input: "src",
+      input: "pages",
       output: "public",
+      includes: "../layouts",
     },
     htmlTemplateEngine: "webc",
     markdownTemplateEngine: "webc",
