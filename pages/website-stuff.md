@@ -1,5 +1,4 @@
 ---
-layout: base.webc
 title: Website stuff
 ---
 
