@@ -8,7 +8,7 @@ Welcome to my web page! Here are some links:
 <div class="lines-list">
 
 - Some [website-related resources](website-stuff) I've collected for people making personal or hobby websites
-- **(Under construction)** A [web accessibility audit](/a11y-audit) for beginners, to catch the biggest access issues in your website
+- **(Under construction)** A web accessibility audit for beginners, to catch the biggest access issues in your website
 </div>
 
 ## about me
