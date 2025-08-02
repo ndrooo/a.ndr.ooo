@@ -9,11 +9,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
 
   eleventyConfig.addPassthroughCopy("./css/");
-  eleventyConfig.addWatchTarget("./css/");
   eleventyConfig.addPassthroughCopy({
     "static/*": "/",
     "static/fonts": "fonts",
   });
+
+  eleventyConfig.addWatchTarget("./css/");
+  eleventyConfig.addWatchTarget("./layouts/");
+  eleventyConfig.addWatchTarget("./components/");
+  eleventyConfig.addWatchTarget("./static/");
 
   return {
     dir: {
