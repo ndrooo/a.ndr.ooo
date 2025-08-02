@@ -20,3 +20,5 @@ You can contact me at [a@ndr.ooo](mailto:a@ndr.ooo).
 
 ## colophon
 This **website** is built with [11ty](https://www.11ty.dev/). The **source code** is available on [GitHub](https://github.com/ndrooo/a.ndr.ooo) and the page is hosted on [Cloudflare Pages](https://pages.cloudflare.com/). The **font** is [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/). This is a [colophon](https://indieweb.org/colophon), which explains how the website is made in case you want to **build something similar**. You can **copy** whatever you want because it's all [MIT licensed](https://github.com/ndrooo/a.ndr.ooo/blob/main/LICENSE).
+
+<webring-footer />

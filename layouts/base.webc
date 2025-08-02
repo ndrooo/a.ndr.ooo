@@ -15,8 +15,7 @@
   <body>
     <div class="content-box">
         <main-nav :page="page"></main-nav>
-        <main @raw="content"></main>
-        <webring-footer></webring-footer>
+        <main @html="content"></main>
     </div>
     <script type="module" webc:keep @raw="getBundle('js')"></script>
   </body>

@@ -26,6 +26,5 @@ export default function (eleventyConfig) {
       includes: "../layouts",
     },
     htmlTemplateEngine: "webc",
-    markdownTemplateEngine: "webc",
   };
 }
