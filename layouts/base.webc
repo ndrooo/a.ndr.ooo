@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="../css/base.css">
 
     <style webc:keep @raw="getBundle('css')"></style>
+
+    <meta-info></meta-info>
   </head>
   <body>
     <div class="content-box">
         <main-nav :page="page"></main-nav>
         <main @raw="content"></main>
+        <webring-footer></webring-footer>
     </div>
     <script type="module" webc:keep @raw="getBundle('js')"></script>
   </body>

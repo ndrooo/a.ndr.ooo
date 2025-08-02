@@ -4,9 +4,16 @@
   <a href="https://pzone.ndr.ooo/androoo/next" aria-label="Next site in ring">&rarr;</a>
 </footer>
 
-<style>
-  footer {
+<style webc:scoped>
+  :host footer {
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  :host a {
+    text-align: center;
+    min-inline-size: 2rem;
   }
 </style>
