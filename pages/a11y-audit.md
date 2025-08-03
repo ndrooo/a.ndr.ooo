@@ -1,5 +1,8 @@
 ---
 title: A pretty good web accessibility audit
+description:
+  Some ideas for HTML/CSS beginners that might help quickly make your website
+  more accessible to everyone.
 ---
 
 # A pretty good web accessibility audit

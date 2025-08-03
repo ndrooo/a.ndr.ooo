@@ -1,5 +1,6 @@
 ---
 title: Website stuff
+description: A very loose collection of some resources I've found helpful in building hobby and personal websites.
 ---
 
 # Website stuff
@@ -7,6 +8,7 @@ title: Website stuff
 A very loose collection of some resources I've found helpful in building hobby and personal websites.
 
 ## Big informational resources
+
 <div class="lines-list">
 
 - [The IndieWeb Wiki](https://indieweb.org/) - all sorts of information about making independent and personal websites
@@ -14,6 +16,7 @@ A very loose collection of some resources I've found helpful in building hobby a
 </div>
 
 ## Tools and assets
+
 <div class="lines-list">
 
 - [Doodad Pattern Generator](https://doodad.dev/pattern-generator/)
@@ -21,6 +24,7 @@ A very loose collection of some resources I've found helpful in building hobby a
 </div>
 
 ### Fonts and icons
+
 <div class="lines-list">
 
 - [Lucide Icons](https://lucide.dev/) - Free and open source!
@@ -30,13 +34,14 @@ A very loose collection of some resources I've found helpful in building hobby a
 </div>
 
 ## Guides and tutorials
+
 <div class="lines-list">
 
 - [shar - how i made my website](https://www.youtube.com/watch?v=_tWh4cYCTv0)
 </div>
 
-
 ## Websites for inspiration
+
 <div class="lines-list">
 
 - [Live Laugh Blog](https://livelaugh.blog/)
@@ -51,6 +56,7 @@ A very loose collection of some resources I've found helpful in building hobby a
 </div>
 
 ## Collections of websites
+
 <div class="lines-list">
 
 - [Site of Sites](https://www.siteofsites.co/)
@@ -59,6 +65,7 @@ A very loose collection of some resources I've found helpful in building hobby a
 </div>
 
 ## Big lists of website ideas
+
 <div class="lines-list">
 
 - [100 things you can do on your personal website](https://jamesg.blog/2024/02/19/personal-website-ideas)

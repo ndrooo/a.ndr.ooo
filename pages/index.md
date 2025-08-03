@@ -1,5 +1,7 @@
 ---
 title: a.ndr.ooo
+description:
+    Wowee zowee it's a website!
 ---
 
 # a.ndr.ooo
