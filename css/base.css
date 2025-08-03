@@ -95,6 +95,16 @@ strong {
 	font-weight: 550;
 }
 
+kbd {
+	font-size: 1rem;
+	background-color: var(--link);
+	padding: 0.2rem;
+	margin: 0 0.125rem;
+	border-radius: 0.2rem;
+	color: var(--background);
+	box-shadow: 0.125rem 0.125rem var(--accent);
+}
+
 code {
 	background-color: var(--surface);
 	border-radius: 0.25rem;
