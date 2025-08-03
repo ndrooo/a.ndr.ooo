@@ -1,0 +1,15 @@
+<style webc:scoped>
+  :host ul {
+    padding: 0;
+  }
+
+  :host ul li {
+    list-style-type: none;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
+    &:not(:last-child) {
+      border-block-end: 2px groove var(--accent);
+    }
+  }
+</style>

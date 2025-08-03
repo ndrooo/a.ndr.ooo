@@ -111,19 +111,3 @@ code {
 .text-container :nth-child(1) {
 	margin-block-start: 0;
 }
-
-.lines-list {
-    display: contents;
-    ul {
-        padding: 0;
-    }
-	li {
-		list-style-type: none;
-		padding-block: 0.5rem;
-		padding-inline: 1rem;
-
-		&:not(:last-child) {
-			border-block-end: 2px groove var(--accent);
-		}
-	}
-}

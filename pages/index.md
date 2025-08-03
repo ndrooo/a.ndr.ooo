@@ -7,11 +7,13 @@ description:
 # a.ndr.ooo
 
 Welcome to my web page! Here are some links:
-<div class="lines-list">
+
+<lines-list>
 
 - Some [website-related resources](website-stuff) I've collected for people making personal or hobby websites
 - **(Under construction)** A web accessibility audit for beginners, to catch the biggest access issues in your website
-</div>
+
+</lines-list>
 
 ## about me
 I'm **Andrew**, a software developer and curious person in New York City. For my job I build **websites** and I am particularly focused on making them **accessible**. When I feel like writing software for fun I build **different websites**, dabble in **game development**, mess around with **Unix**, and continuously improve my [NixOS configuration](https://github.com/ndrooo/nix).
