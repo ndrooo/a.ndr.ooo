@@ -40,12 +40,18 @@ If you aren't seeing anything at all, the most common issue is that you've set `
 It's often misunderstood, but the rule is simple: if it is **interactive**, it should be in the focus order. If it's not, it shouldn't be. Interactive means: can the user do something to interact with it. That could mean "clicking" by pressing <kbd>Space</kbd> or <kbd>Enter</kbd>, it could mean scrolling using the arrow keys, or it could be as simple as a tooltip that pops up automatically when you put focus on the element.
 
 As you're tabbing through, ask whether each element you tab to is interactive, and ask yourself whether there are any elements that are interactive that you never reach. This should mostly happen automatically: tags like `<a>`, `<button>`, and `<input>` are included in the tab order by default. There are two common culprits here:
+
 1. You've used an element like `<div>` to make your fancy button, so the browser doesn't know it's interactive. There are too many issues with doing something like this to list here. Use the right tag, and write a bit more CSS to style it how you want.
 2. You're using the `tabindex` attribute, which manually changes whether something is in the tab order. Most of the time that's a bad idea! You should probably find a different way to do what you were trying to do.
 
 A few caveats:
+
 - For some groups of interactive elements, such as radio buttons, you may only be able to tab to the first one in the group, but that's by design. You can use the arrow keys to reach the others, and since that's an established pattern it's acceptable.
-- It's ok for *temporarily* disabled elements to be in the focus order even though you can't interact with them at that moment.
+- It's ok for _temporarily_ disabled elements to be in the focus order even though you can't interact with them at that moment.
+
+### Does it make sense?
+
+This is a little more subjective. Are you jumping around the page randomly? Does the order feel like how you would "read" the page naturally? Is it pleasant and usable? Does it generally work the same forwards and backwards?
 
 ## More coming soon!
 
