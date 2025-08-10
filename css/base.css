@@ -15,12 +15,15 @@
 	--s1: calc(var(--s0) * var(--scale-ratio));
 	--s2: calc(var(--s1) * var(--scale-ratio));
 	--s3: calc(var(--s2) * var(--scale-ratio));
+
+	--font: 'Atkinson Next', sans-serif;
+	--font-mono: 'Atkinson Mono', monospace;
 }
 
 body {
 	background-color: var(--background);
 	color: var(--foreground);
-	font-family: 'Atkinson Hyperlegible Next', sans-serif;
+	font-family: var(--font);
 	font-size: var(--s0);
 	line-height: var(--scale-ratio);
 	margin: 0 auto;
@@ -105,13 +108,14 @@ kbd {
 	border-radius: 0.2rem;
 	color: var(--background);
 	box-shadow: 0.125rem 0.125rem var(--accent);
+	font-family: var(--font-mono);
 }
 
 code {
 	background-color: var(--surface);
 	border-radius: 0.25rem;
 	padding: 0.15rem;
-	font-family: 'Atkinson Hyperlegible Mono Variable', monospace;
+	font-family: var(--font-mono);
 	font-size: 0.9rem;
 
 	&::selection {
