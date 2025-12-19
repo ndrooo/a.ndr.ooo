@@ -109,6 +109,10 @@ kbd {
 	color: var(--background);
 	box-shadow: 0.125rem 0.125rem var(--accent);
 	font-family: var(--font-mono);
+
+	&::selection {
+		color: var(--foreground);
+	}
 }
 
 code {
