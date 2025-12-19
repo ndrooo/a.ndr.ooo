@@ -1,12 +1,12 @@
 ---
 title: a.ndr.ooo
 description:
-    Wowee zowee it's a website!
+    Andrew Sherman's website
 ---
 
-# a.ndr.ooo
+# Andrew Sherman
 
-Welcome to my web page! Here are some things I'm making on here:
+Welcome to my website! Here are some things I'm working on:
 
 <lines-list>
 
@@ -18,7 +18,7 @@ Welcome to my web page! Here are some things I'm making on here:
 ## about me
 I'm **Andrew**, a software developer and curious person in New York City. For my job I build **websites** and I am particularly focused on making them **accessible**. When I feel like writing software for fun I build **different websites**, dabble in **game development**, mess around with **Unix**, and continuously improve my [NixOS configuration](https://github.com/ndrooo/nix).
 
-I am a **gardener** of the home and community variety, I'm a **birder**, and I enjoy learning anything I can about **ecology**. I know a lot about **tea** and I do like to drink it as well. I like **crosswords** and other puzzles, and I'm trying to learn how to make them. I dabble in **electronics and fabrication**. I'm very interested in **home electrification** and **climate tech** as well.
+I am a **gardener** at my community garden and at home. I'm interested in **ecology**, particularly of plants and trees. I know a lot about **tea** and I like to drink it too. I dabble in **electronics and fabrication** and have built a few keyboards and some smaller projects. I'm very interested in **home electrification** and **climate tech**.
 
 You can contact me at [a@ndr.ooo](mailto:a@ndr.ooo).
 
