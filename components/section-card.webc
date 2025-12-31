@@ -1,0 +1,62 @@
+<article>
+    <img :src="src" :alt="alt" />
+    <div>
+        <h2><a :href="href" @text="title"></a></h2>
+        <slot></slot>
+    </div>
+</article>
+
+<style webc:scoped>
+    :host {
+        border-bottom: 2px dashed var(--accent);
+        display: block;
+    }
+
+    :host:hover {
+        background-color: var(--surface);
+    }
+
+    :host:first-of-type {
+        border-top: 2px dashed var(--accent);
+        margin-block-start: 2rem;
+    }
+
+    :host:last-of-type {
+        margin-block-end: 2rem;
+    }
+
+    :host article {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1rem 2rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    :host:nth-of-type(even) article {
+        flex-flow: row-reverse wrap;
+    }
+
+    :host article a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    :host article > img {
+        inline-size: 256px;
+        image-rendering: pixelated;
+    }
+
+    :host article > div {
+        min-inline-size: 40%;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+</style>
