@@ -17,6 +17,12 @@ A collection of resources and inspiration for personal or hobby websites
 
 </section-card>
 
+<section-card title="Teahouse" src="/teahouse.svg" alt="Pixelated doodle of a gongfu tea setup with a cat peeking at it." href="/teahouse">
+
+My thoughts on leaves in water
+
+</section-card>
+
 <section-card title="Web accessibility" src="/a11y.svg" alt="Pixelated doodle of a person surrounded by assistive technologies and representations of web browsing." href="/a11y-audit">
 
 **In progress**: a simple web accessibility audit intended for small and simple websites

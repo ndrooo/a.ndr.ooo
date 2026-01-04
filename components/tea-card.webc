@@ -1,0 +1,15 @@
+<article>
+    <h2 @text="title"></h2>
+    <img :src="src" :alt="alt" />
+</article>
+
+<style webc:scoped>
+    :host article {
+        border: 2px solid var(--accent);
+    }
+
+    :host img {
+        width: 256px;
+        image-rendering: pixelated;
+    }
+</style>

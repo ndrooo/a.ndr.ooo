@@ -1,0 +1,7 @@
+---
+title: Teahouse
+---
+
+<h1>Andrew's teahouse</h1>
+
+<tea-card webc:for="post of collections.tea" :title="post.data.title" :src="post.data.image" :alt="post.data.imagealt"></tea-card>
