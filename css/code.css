@@ -1,0 +1,94 @@
+/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
+/* (Then modified by hand) */
+
+pre {
+  background: var(--surface-darker);
+  border: 2px solid var(--accent);
+  hyphens: none;
+  line-height: 1.15;
+  margin: .5em 0;
+  overflow: auto;
+  padding: 1em;
+  tab-size: 4;
+}
+
+code {
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+code::selection,
+code *::selection {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+:not(pre) > code {
+  background-color: var(--surface);
+  border-radius: 0.25rem;
+  padding: 0.15rem;
+}
+
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: .7;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999999;
+}
+.token.punctuation {
+  color: #bababa;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #b38375;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #527d8b;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--accent);
+}
+.token.function {
+  color: #706b9f;
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: #b39e75;
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}

@@ -5,6 +5,7 @@
 :root {
 	--background: #0a0a0a;
 	--surface: #222;
+	--surface-darker: #000;
 	--foreground: #ccc;
 	--link: #999;
 	--accent: #3a625b;
@@ -112,19 +113,6 @@ kbd {
 
 	&::selection {
 		color: var(--foreground);
-	}
-}
-
-code {
-	background-color: var(--surface);
-	border-radius: 0.25rem;
-	padding: 0.15rem;
-	font-family: var(--font-mono);
-	font-size: 0.9rem;
-
-	&::selection {
-		background-color: var(--accent);
-		color: var(--background);
 	}
 }
 
