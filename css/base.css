@@ -97,6 +97,15 @@ a {
 	}
 }
 
+ul {
+	list-style-type: square;
+	padding-inline-start: 1.5rem;
+
+	> li:has(:focus-visible)::marker {
+		color: var(--accent);
+	}
+}
+
 strong {
 	font-weight: 550;
 }

@@ -23,6 +23,12 @@ A collection of resources and inspiration for personal or hobby websites
 
 </section-card>
 
+<section-card title="NYC ephemera" src="/nyc-ephemera.png" alt="Pixelated doodle of a collection of NYC-related things: the Keano eye-in-pyramid, the Chrysler building and AT&T long lines building, a Redbird train, the parks department logo, a pigeon and a rat." href="/nyc-ephemera">
+
+Links to odd or unique things I've learned about New York City.
+
+</section-card>
+
 ## colophon
 
 This **website** is built with [11ty](https://www.11ty.dev/). The **source code** is available on [GitHub](https://github.com/ndrooo/a.ndr.ooo) and the page is hosted on [Cloudflare Pages](https://pages.cloudflare.com/). The **font** is [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/). This is a [colophon](https://indieweb.org/colophon), which explains how the website is made in case you want to **build something similar**. You can **copy** whatever you want because it's all [MIT licensed](https://github.com/ndrooo/a.ndr.ooo/blob/main/LICENSE).
