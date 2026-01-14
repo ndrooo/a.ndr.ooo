@@ -25,7 +25,7 @@ A collection of resources and inspiration for personal or hobby websites
 
 <section-card title="NYC ephemera" src="/nyc-ephemera.png" alt="Pixelated doodle of a collection of NYC-related things: the Keano eye-in-pyramid, the Chrysler building and AT&T long lines building, a Redbird train, the parks department logo, a pigeon and a rat." href="/nyc-ephemera">
 
-Links to odd or unique things I've learned about New York City.
+Links to odd or unique things I've learned about New York City
 
 </section-card>
 
