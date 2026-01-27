@@ -15,13 +15,10 @@ Complex, widely used websites need testing by experienced people using specializ
 
 Automated tools to test accessibility can be a big help, particularly because you can run them regularly. Be warned though: don't just stop at the automated tools! These tools can't detect your intent. If the page is partially wrong, they can catch the inconsistency. If many things are wrong in the same way, they might not! A human being with a brain is the best accessibility checker. With that said, here are some useful tools to supplement that process:
 
-<lines-list>
-
 - [WAVE](https://wave.webaim.org/) is a useful tool that's easy to run on any website and will turn up lots of real issues.
 - The [Lighthouse audit](https://developer.chrome.com/docs/lighthouse/) is built into Chrome/Chromium browsers and usable elsewhere, with pretty good accessibility checks and checks for e.g. performance as well.
 - Deque's [Axe](https://www.deque.com/axe/) is an industry standard, but some of their tools cost money.
-
-</lines-list>
+{.lines}
 
 ## The tab test
 
@@ -57,10 +54,7 @@ This is a little more subjective. Are you jumping around the page randomly? Does
 
 ## Further reading
 
-<lines-list>
-
 - [A11ycasts](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) is an engaging and useful selection of videos on web accessibility.
 - The [A11y project](https://www.a11yproject.com/) has a whole lot of writing on good patterns for web accessibility!
 - [Accessibility Support](https://a11ysupport.io/) is a more advanced resource but useful for knowing if a particular technique for making something accessible will work in real life.
-
-</lines-list>
+{.lines}

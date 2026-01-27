@@ -111,6 +111,20 @@ ul {
 	}
 }
 
+ul.lines {
+	padding: 0;
+
+	> li {
+		list-style-type: none;
+		padding-block: 0.5rem;
+		padding-inline: 1rem;
+
+		&:not(:last-child) {
+			border-block-end: 2px groove var(--accent);
+		}
+	}
+}
+
 strong {
 	font-weight: 550;
 

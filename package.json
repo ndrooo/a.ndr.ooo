@@ -15,5 +15,8 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "markdown-it-attrs": "^4.3.1"
   }
 }
