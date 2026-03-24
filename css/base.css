@@ -19,6 +19,7 @@
 
 	--font: 'Atkinson Next', sans-serif;
 	--font-mono: 'Atkinson Mono', monospace;
+	--font-heading: 'Fraunces', serif;
 }
 
 body {
@@ -53,6 +54,8 @@ h6 {
 	hyphens: auto;
 	margin-block-start: 0;
 	margin-block-end: 0.5rem;
+	font-family: var(--font-heading);
+	font-variation-settings: "WONK" 1, "SOFT" 50, "opsz" 9;
 
 	&::selection {
 		background-color: var(--heading);
