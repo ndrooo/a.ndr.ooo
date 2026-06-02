@@ -105,6 +105,11 @@ a {
 	}
 }
 
+hr {
+	border: none;
+	border-block-end: 2px dashed var(--accent);
+}
+
 ul {
 	list-style-type: square;
 	padding-inline-start: 1.5rem;
