@@ -4,6 +4,9 @@ Some assets, mostly free and open-source, which you may want to add to your webs
 
 [Back to website resources ↑](..)
 
+## Templates
+- [Ribose free layouts](https://ribo.zone/free/layouts/)
+
 ## Image assets
 - [Lucide Icons](https://lucide.dev/) - Free and open source!
 - [MS Clipart Collection](https://dn721601.ca.archive.org/0/items/MS_Clipart_Collection_SVG/search/search.html)
