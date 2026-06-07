@@ -13,7 +13,7 @@ I'm **Andrew**, a software developer and curious person in New York City. Learn 
 
 {{collections.now.first.date | date: '%b %d, %Y', 'UCT'}} - [see all /now posts](/now)
 
-<section-card title="Website stuff" src="/website-stuff.svg" alt="Pixelated doodle of a paintbrush on a globe inside a web browser." href="/website-stuff">
+<section-card title="Making websites" src="/website-stuff.svg" alt="Pixelated doodle of a paintbrush on a globe inside a web browser." href="/web">
 
 A collection of resources and inspiration for personal or hobby websites
 
