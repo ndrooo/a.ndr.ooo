@@ -1,3 +1,8 @@
+---
+title: Further webular reading
+description: My growing collection of useful informational resources and writing about website building.
+---
+
 # Further webular reading
 
 My growing collection of useful informational resources and writing about website building.

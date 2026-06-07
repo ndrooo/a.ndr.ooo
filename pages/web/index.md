@@ -1,6 +1,6 @@
 ---
 title: Making websites
-description: A very loose collection of some resources I've found helpful in building hobby and personal websites.
+description: A loose and occasionally updated collection of some resources I've found helpful in building hobby and personal websites.
 ---
 
 # Making websites

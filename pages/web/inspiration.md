@@ -1,3 +1,8 @@
+---
+title: Website inspiration zone
+description: This is my collection of websites I think are stylish, impressive, interesting, or otherwise inspiring to my imagination.
+---
+
 # Website inspiration zone
 This is my collection of websites I think are stylish, impressive, interesting, or otherwise inspiring to my imagination. If you are creating a website, this is a list for you to **get inspired by**/**borrow from**/**steal from**. Be mindful of [license terms](https://en.wikipedia.org/wiki/Software_license), and be advised some of these sites may have accessibility issues.
 

@@ -1,3 +1,8 @@
+---
+title: Web assets and tools
+description: Some assets which you may want to add to your website.
+---
+
 # Web assets and tools
 
 Some assets, mostly free and open-source, which you may want to add to your website. It's mostly **fonts**, because I love **fonts**. Also a few tools and generators.
