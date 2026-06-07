@@ -1,0 +1,17 @@
+media: static/media
+content:
+  - name: now
+    label: Now
+    type: collection
+    path: pages/now
+    fields:
+      - name: content
+        type: rich-text
+      - name: iam
+        type: object
+        list: true
+        fields:
+          - name: gerund
+            type: text
+          - name: subject
+            type: rich-text
