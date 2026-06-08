@@ -1,0 +1,8 @@
+name = "a-ndr-ooo"
+compatibility_date = "2026-06-08"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "404-page"
+html_handling = "drop-trailing-slash"
