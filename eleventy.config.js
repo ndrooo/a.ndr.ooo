@@ -9,10 +9,9 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.amendLibrary("md", (mdLib) =>
-    mdLib.use(markdownItAttrs, { allowedAttributes: ["id", "class"] })
+    mdLib.use(markdownItAttrs, { allowedAttributes: ["id", "class"] }),
   );
   eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
-
 
   eleventyConfig.addPassthroughCopy("./css/");
   eleventyConfig.addPassthroughCopy({
@@ -24,6 +23,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./layouts/");
   eleventyConfig.addWatchTarget("./components/");
   eleventyConfig.addWatchTarget("./static/");
+
+  eleventyConfig.setLiquidOptions({
+    root: ["components", "pages", "layouts"],
+  });
 
   return {
     dir: {
