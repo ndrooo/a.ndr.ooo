@@ -133,6 +133,29 @@ ul.lines {
 	}
 }
 
+table, td {
+	border: 1px solid var(--accent);
+}
+
+th, td {
+	padding: 0.25rem 0.75rem;
+}
+
+th {
+	font-family: var(--font-heading);
+	text-align: start;
+}
+
+td {
+	&:focus-within {
+		background-color: var(--surface);
+	}
+
+	&:hover {
+		background-color: var(--surface);
+	}
+}
+
 strong {
 	font-weight: 550;
 

@@ -5,4 +5,5 @@ This is a [now page](https://indieweb.org/now) with short and wildly sporadic up
 {% for now in collections.now %}
     <h2>{{now.date | date: '%b %d, %Y', 'UCT'}}</h2>
     {{now.content}}
+    {% render "iam-table" with now.data.iam as iam %}
 {% endfor %}

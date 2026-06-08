@@ -9,9 +9,13 @@ I'm **Andrew**, a software developer and curious person in New York City. Learn 
 
 ---
 
-{{collections.now.first.content}}
+{% assign latestNow = collections.now.first %}
 
-{{collections.now.first.date | date: '%b %d, %Y', 'UCT'}} - [see all /now posts](/now)
+{{latestNow.content}}
+
+{% render "iam-table", iam: latestNow.data.iam %}
+
+{{latestNow.date | date: '%b %d, %Y', 'UCT'}} - [see older updates](/now)
 
 <section-card title="Making websites" src="/website-stuff.svg" alt="Pixelated doodle of a paintbrush on a globe inside a web browser." href="/web">
 
