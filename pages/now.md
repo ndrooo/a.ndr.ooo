@@ -2,7 +2,7 @@
 
 This is a [now page](https://indieweb.org/now) with short and wildly sporadic updates on what I'm up to.
 
-{% for now in collections.now %}
+{% for now in collections.now reversed %}
     <h2>{{now.date | date: '%b %d, %Y', 'UCT'}}</h2>
     {{now.content}}
     {% render "iam-table" with now.data.iam as iam %}

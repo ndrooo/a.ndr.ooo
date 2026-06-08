@@ -9,7 +9,7 @@ I'm **Andrew**, a software developer and curious person in New York City. Learn 
 
 ---
 
-{% assign latestNow = collections.now.first %}
+{% assign latestNow = collections.now.last %}
 
 {{latestNow.content}}
 
