@@ -44,6 +44,7 @@ export default function (eleventyConfig) {
       output: "public",
       includes: "../layouts",
     },
-    htmlTemplateEngine: "webc",
+    htmlTemplateEngine: "liquid",
+    markdownTemplateEngine: "liquid",
   };
 }

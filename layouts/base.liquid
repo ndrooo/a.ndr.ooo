@@ -3,21 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title @text="title"></title>
+    <title>{{title}}</title>
 
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/code.css">
 
-    <style webc:keep @raw="getBundle('css')"></style>
-
-    <meta webc:if="description" name="description" :content="description" />
+    {% if description %}
+      <meta name="description" content="{{description}}" />
+    {% endif %}
   </head>
   <body>
     <div class="content-box">
-        <main-nav :page="page"></main-nav>
-        <main @html="content"></main>
+        {% render 'main-nav' with page %}
+        <main>{{content}}</main>
     </div>
-    <script type="module" webc:keep @raw="getBundle('js')"></script>
   </body>
 </html>

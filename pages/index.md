@@ -17,11 +17,16 @@ I'm **Andrew**, a software developer and curious person in New York City. Learn 
 
 {{latestNow.date | niceDate}} - [see older updates](/now/)
 
-<section-card title="Making websites" src="/website-stuff.svg" alt="Pixelated doodle of a paintbrush on a globe inside a web browser." href="/web/">
-
+{% capture web-content %}
 A collection of resources and inspiration for personal or hobby websites
-
-</section-card>
+{% endcapture %}
+{% render "section-card",
+    title: "Making websites",
+    src: "/website-stuff.svg",
+    alt: "Pixelated doodle of a paintbrush on a globe inside a web browser.",
+    href: "/web/",
+    content: web-content,
+%}
 
 <section-card title="Web accessibility" src="/a11y.svg" alt="Pixelated doodle of a person surrounded by assistive technologies and representations of web browsing." href="/a11y-audit/">
 

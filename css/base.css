@@ -182,3 +182,56 @@ kbd {
 .text-container :nth-child(1) {
 	margin-block-start: 0;
 }
+
+.section-card {
+	border-bottom: 2px dashed var(--accent);
+	display: block;
+
+	&:hover {
+		background-color: var(--surface);
+	}
+
+	&:first-of-type {
+		border-top: 2px dashed var(--accent);
+		margin-block-start: 2rem;
+	}
+
+	&:last-of-type {
+		margin-block-end: 2rem;
+	}
+
+	& {
+		position: relative;
+		display: flex;
+		flex-flow: row wrap;
+		padding: 1rem 2rem;
+		gap: 2rem;
+		justify-content: center;
+	}
+
+	&:nth-of-type(even) {
+		flex-flow: row-reverse wrap;
+	}
+
+	& a::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	& > img {
+		inline-size: 256px;
+		image-rendering: pixelated;
+	}
+
+	& > div {
+		min-inline-size: 40%;
+		flex-basis: 0;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
