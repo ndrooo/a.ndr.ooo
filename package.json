@@ -17,6 +17,7 @@
     "yaml": "^2.8.0"
   },
   "devDependencies": {
+    "dayjs": "^1.11.21",
     "markdown-it-attrs": "^4.3.1"
   }
 }

@@ -2,6 +2,8 @@ import pluginWebc from "@11ty/eleventy-plugin-webc";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownItAttrs from "markdown-it-attrs";
 import YAML from "yaml";
+import dayjs from "dayjs";
+import advancedFormat from "dayjs/plugin/advancedFormat.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc, {
@@ -26,6 +28,14 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setLiquidOptions({
     root: ["components", "pages", "layouts"],
+  });
+
+  dayjs.extend(advancedFormat);
+  eleventyConfig.addFilter("niceDate", function (dateMillis) {
+    const date = dayjs(dateMillis);
+    return date.year === dayjs().year
+      ? date.format("dddd, MMMM Do")
+      : date.format("MMMM Do, YYYY");
   });
 
   return {
