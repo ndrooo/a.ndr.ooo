@@ -23,7 +23,7 @@ A collection of resources and inspiration for personal or hobby websites
 
 </section-card>
 
-<section-card title="Web accessibility" src="/a11y.svg" alt="Pixelated doodle of a person surrounded by assistive technologies and representations of web browsing." href="/a11y-audit/">
+<section-card title="Web accessibility" src="/a11y.svg" alt="Pixelated doodle of a person surrounded by assistive technologies and representations of web browsing." href="/accessibility/">
 
 **In progress**: a simple web accessibility audit intended for small and simple websites
 
