@@ -4,6 +4,7 @@ import markdownItAttrs from "markdown-it-attrs";
 import YAML from "yaml";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat.js";
+import utc from "dayjs/plugin/utc.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc, {
@@ -31,9 +32,10 @@ export default function (eleventyConfig) {
   });
 
   dayjs.extend(advancedFormat);
+  dayjs.extend(utc);
   eleventyConfig.addFilter("niceDate", function (dateMillis) {
-    const date = dayjs(dateMillis);
-    return date.year === dayjs().year
+    const date = dayjs(dateMillis).utc();
+    return date.year === dayjs().utc().year
       ? date.format("dddd, MMMM Do")
       : date.format("MMMM Do, YYYY");
   });
