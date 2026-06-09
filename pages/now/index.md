@@ -1,3 +1,7 @@
+---
+override:tags: []
+---
+
 # What I am doing now
 
 This is a [now page](https://indieweb.org/now) with short and wildly sporadic updates on what I'm up to.
