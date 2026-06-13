@@ -37,4 +37,4 @@ Links to odd or unique things I've learned about New York City
 
 </section-card>
 
-<webring-footer />
+<main-footer />

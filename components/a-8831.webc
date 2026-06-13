@@ -1,0 +1,52 @@
+<a webc:if="href" :href="href">
+  <img :src="'/static/88x31/' + src" :alt="alt" />
+</a>
+<img webc:if="!href" :src="'/static/88x31/' + src" :alt="alt" />
+
+<style webc:scoped>
+  :host {
+    display: contents;
+    --scale: 1.25;
+    --focus-zoom: 1.5;
+  }
+
+  :host a {
+    width: calc(88px * var(--scale));
+    height: calc(31px * var(--scale));
+
+    & img:hover {
+      --size: 2px;
+      --color: var(--heading);
+      filter: drop-shadow(var(--size) var(--size) 0 var(--color))
+        drop-shadow(calc(-1 * var(--size)) var(--size) 0 var(--color))
+        drop-shadow(var(--size) calc(-1 * var(--size)) 0 var(--color))
+        drop-shadow(
+          calc(-1 * var(--size)) calc(-1 * var(--size)) 0 var(--color)
+        );
+    }
+
+    &:focus-visible img {
+      --size: 2px;
+      --color: var(--foreground);
+      filter: drop-shadow(var(--size) var(--size) 0 var(--color))
+        drop-shadow(calc(-1 * var(--size)) var(--size) 0 var(--color))
+        drop-shadow(var(--size) calc(-1 * var(--size)) 0 var(--color))
+        drop-shadow(
+          calc(-1 * var(--size)) calc(-1 * var(--size)) 0 var(--color)
+        );
+      position: relative;
+      --offset: calc(calc(var(--focus-zoom) - 1) / 2);
+      top: calc(-31px * var(--scale) * var(--offset));
+      left: calc(-88px * var(--scale) * var(--offset));
+      width: calc(88px * var(--scale) * var(--focus-zoom));
+      height: calc(31px * var(--scale) * var(--focus-zoom));
+    }
+  }
+
+  :host img {
+    display: block;
+    image-rendering: pixelated;
+    width: calc(88px * var(--scale));
+    height: calc(31px * var(--scale));
+  }
+</style>

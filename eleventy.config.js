@@ -20,6 +20,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "static/*": "/",
     "static/fonts": "fonts",
+    "static/88x31": "static/88x31",
   });
 
   eleventyConfig.addWatchTarget("./css/");

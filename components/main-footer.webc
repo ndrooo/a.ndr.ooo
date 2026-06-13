@@ -1,0 +1,45 @@
+<footer>
+  <div class="webring">
+    <a href="https://pzone.ndr.ooo/androoo/prev" aria-label="Previous site in ring">&larr;</a>
+    <a href="https://pzone.ndr.ooo">Party Zone Webring</a>
+    <a href="https://pzone.ndr.ooo/androoo/next" aria-label="Next site in ring">&rarr;</a>
+  </div>
+  <div class="grid-88x31">
+    <a-8831 src="queercoding.png" alt="you're telling me a queer coded this"></a-8831>
+    <a-8831 src="graphicdesign.png" alt="Frog clipart next to the phrase 'graphic design is my passion'"></a-8831>
+    <a-8831 src="brainmade.png" href="https://brainmade.org" alt="An icon of a sprout inside a head and the text 'brainmade.org'"></a-8831>
+    <a-8831 src="inat.png" href="https://www.inaturalist.org/people/androoo" alt="Logo for iNaturalist"></a-8831>
+    <a-8831 src="netscapebroken.png" alt="The Netscape broken image icon"></a-8831>
+  </div>
+</footer>
+
+<style webc:scoped>
+  :host footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+    align-content: center;
+  }
+
+  :host footer > * {
+    margin-inline: auto;
+  }
+
+  :host a {
+    text-align: center;
+    min-inline-size: 2rem;
+  }
+
+  :host .grid-88x31 {
+    background-color: var(--surface);
+    border: 3px outset var(--accent);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 30rem;
+    padding: 0.5rem;
+    width: max-content;
+  }
+</style>
