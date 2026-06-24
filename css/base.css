@@ -137,12 +137,17 @@ table, td {
 	border: 1px solid var(--accent);
 }
 
-th, td {
-	padding: 0.25rem 0.75rem;
+caption {
+	display: block;
 }
 
-th {
+caption, th {
 	font-family: var(--font-heading);
+	font-weight: bold;
+}
+
+caption, th, td {
+	padding: 0.25rem 0.75rem;
 	text-align: start;
 }
 
