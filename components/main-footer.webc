@@ -4,6 +4,12 @@
     <a href="https://pzone.ndr.ooo">Party Zone Webring</a>
     <a href="https://pzone.ndr.ooo/androoo/next" aria-label="Next site in ring">&rarr;</a>
   </div>
+  <div class="webring">
+    <a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=80">&larr;</a>
+    <a id="rc-ring-home" data-rc-uuid="341e85a4-6883-4967-b4ac-667a48d55bc2" href="https://ring.recurse.com/">The Recurse Webring</a>
+    <a id="rc-ring-rand" href="https://ring.recurse.com/rand">[Random site]</a>
+    <a id="rc-ring-next" href="https://ring.recurse.com/next?id=80">&rarr;</a>
+  </div>
   <div class="grid-88x31">
     <a-8831 src="queercoding.png" alt="you're telling me a queer coded this"></a-8831>
     <a-8831 src="graphicdesign.png" alt="Frog clipart next to the phrase 'graphic design is my passion'"></a-8831>
@@ -12,6 +18,8 @@
     <a-8831 src="netscapebroken.png" alt="The Netscape broken image icon"></a-8831>
   </div>
 </footer>
+
+<script webc:keep src="https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js" type="text/javascript"></script>
 
 <style webc:scoped>
   :host footer {
