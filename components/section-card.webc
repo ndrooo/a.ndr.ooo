@@ -49,6 +49,7 @@
     }
 
     :host article > img {
+        block-size: 256px;
         inline-size: 256px;
         image-rendering: pixelated;
     }
