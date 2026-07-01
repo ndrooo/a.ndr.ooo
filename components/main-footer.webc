@@ -10,6 +10,7 @@
     <a id="rc-ring-rand" href="https://ring.recurse.com/rand">[Random site]</a>
     <a id="rc-ring-next" href="https://ring.recurse.com/next?id=80">&rarr;</a>
   </div>
+  <rc-scout></rc-scout>
   <div class="grid-88x31">
     <a-8831 src="queercoding.png" alt="you're telling me a queer coded this"></a-8831>
     <a-8831 src="graphicdesign.png" alt="Frog clipart next to the phrase 'graphic design is my passion'"></a-8831>
