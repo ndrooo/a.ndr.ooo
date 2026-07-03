@@ -34,16 +34,10 @@ export default function (eleventyConfig) {
 
   dayjs.extend(advancedFormat);
   dayjs.extend(utc);
-  eleventyConfig.addFilter("niceDate", function (dateMillis) {
+  eleventyConfig.addFilter("niceDate", function(dateMillis) {
     const date = dayjs(dateMillis).utc();
-    return date.year === dayjs().utc().year
-      ? date.format("dddd, MMMM Do")
-      : date.format("MMMM Do, YYYY");
-  });
-  eleventyConfig.addFilter("isoDate", function (dateMillis) {
-    const date = dayjs(dateMillis).utc();
-    return date.format("YYYY-MM-DD")
-  });
+    return `<time datetime="${isoDate(date)}">${niceDate(date)}</time>`;
+  })
 
   return {
     dir: {
@@ -53,4 +47,14 @@ export default function (eleventyConfig) {
     },
     htmlTemplateEngine: "webc",
   };
+}
+
+function niceDate(dateObj) {
+  return dateObj.year === dayjs().utc().year
+    ? dateObj.format("dddd, MMMM Do")
+    : dateObj.format("MMMM Do, YYYY");
+}
+
+function isoDate(dateObj) {
+  return dateObj.format("YYYY-MM-DD")
 }
