@@ -49,6 +49,5 @@
     gap: 0.5rem;
     max-width: 30rem;
     padding: 0.5rem;
-    width: max-content;
   }
 </style>
