@@ -40,6 +40,10 @@ export default function (eleventyConfig) {
       ? date.format("dddd, MMMM Do")
       : date.format("MMMM Do, YYYY");
   });
+  eleventyConfig.addFilter("isoDate", function (dateMillis) {
+    const date = dayjs(dateMillis).utc();
+    return date.format("YYYY-MM-DD")
+  });
 
   return {
     dir: {

@@ -68,6 +68,11 @@ h1 {
 	margin-block-end: 0;
 }
 
+.subtitle {
+	margin-block-start: 0;
+	color: var(--link);
+}
+
 nav {
 	border-bottom: 2px solid var(--accent);
 	display: flex;

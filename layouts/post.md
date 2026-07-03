@@ -4,8 +4,7 @@ layout: base.webc
 
 # {{title}}
 
-{{page.date | niceDate}} |
-{%for tag in tags%}{{tag}} {%endfor%}
+Created: <time datetime="{{page.date | isoDate}}">{{page.date | niceDate}}</time>
 {.subtitle}
 
 {{content}}
