@@ -12,10 +12,16 @@ pre {
   tab-size: 4;
 }
 
+a:is(:focus-visible, :hover) code {
+  padding-block: 0;
+  background-color: unset;
+  color: inherit;
+}
+
 code {
   color: var(--foreground);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.875em;
 }
 
 code::selection,
