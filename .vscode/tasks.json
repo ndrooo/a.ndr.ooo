@@ -4,9 +4,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "11ty serve",
-            "type": "shell",
-            "command": "npx @11ty/eleventy --serve"
+            "type": "npm",
+            "script": "dev",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         }
     ]
 }
