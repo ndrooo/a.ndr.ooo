@@ -7,8 +7,6 @@ date: 2025-08-01
 tags: accessibility
 ---
 
-# A pretty good web accessibility audit
-
 It's an exciting thing to see so many people getting interested in making websites for fun! While you're learning your web basics and building your website, it's also important to learn how to make sure your website is accessible to everyone.
 
 Complex, widely used websites need testing by experienced people using specialized tools. Your average hobby website, on the other hand, benefits from tons of work undertaken over the last decade to make the web accessible by default. With that said, there are still plenty of common issues that are easy to catch and fix. So here's an overview of how to do that, from the simple automated tools you can use to the manual checks and nuances you should look for.
