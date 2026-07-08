@@ -1,6 +1,11 @@
+---
+title: NYC ephemera
+description: I've been living in New York for three decades and I keep learning miscellaneous interesting stuff - here's a few things I really like.
+---
+
 # NYC ephemera
 
-I've been living in New York for three decades and I keep learning **miscellaneous interesting stuff** - I figured I should put some of it here.
+I've been living in New York for three decades and I keep learning **miscellaneous interesting stuff** - here's a few things I really like.
 
 ## Advertising
 
