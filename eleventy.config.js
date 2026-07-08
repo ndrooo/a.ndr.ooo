@@ -50,7 +50,7 @@ export default function (eleventyConfig) {
 }
 
 function niceDate(dateObj) {
-  return dateObj.year === dayjs().utc().year
+  return dateObj.year() === dayjs().utc().year()
     ? dateObj.format("dddd, MMMM Do")
     : dateObj.format("MMMM Do, YYYY");
 }
