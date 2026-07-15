@@ -11,6 +11,8 @@ I'm **Andrew**, a software developer and curious person in New York City. Learn 
 
 **Latest post:** [{{latestPost.data.title}}]({{latestPost.url}}) - {{latestPost.date | niceDate}}
 
+[See older posts...](/posts)
+
 ---
 
 ## Right now...
