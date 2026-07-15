@@ -1,6 +1,7 @@
 ---
 title: Reflections on HyperPy
 description: My experiences trying to build a Pythonic vision of the Web in four hours
+date: 2026-07-15
 ---
 
 This week at the [Recurse Center](https://www.recurse.com/) I took part in Impossible Stuff Day! That's a whole day to set an intention way beyond what you think you're capable of doing, and take around four and a half hours (including lunch) to earnestly try to complete as much of it as you can. I spent the day making a novel hypertext called [HyperPy](<>) (hypy) and a browser to implement it!

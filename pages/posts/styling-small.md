@@ -1,6 +1,7 @@
 ---
 title: Styling the small stuff with CSS
 description: There are some small details in my website CSS that I've really enjoyed putting extra work into! Here are some of my favorites, and some brief discussion about how to make them accessible to everyone.
+date: 2026-07-02
 ---
 
 There are some small details in my website CSS that I've really enjoyed putting extra work into! Here are some of my favorites, and some brief discussion about how to make them accessible to everyone.
@@ -13,24 +14,30 @@ Here's how I set selection styles globally:
 
 ```css
 ::selection {
-	background-color: var(--accent);
-	color: var(--background);
+  background-color: var(--accent);
+  color: var(--background);
 }
 ```
 
 And here's how I use [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting/Using) to customize my headers:
 
 ```css
-h1, h2, h3, h4, h5, h6 {
-	color: var(--heading);
-	&::selection {
-		background-color: var(--heading);
-		color: var(--background);
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  &::selection {
+    background-color: var(--heading);
+    color: var(--background);
+  }
 }
 ```
 
 ### Accessibility
+
 There are a few accessibility concerns to watch out for when styling selection. Most importantly, make sure your text is still readable to everyone, even when selected. That means [providing enough color contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) and making sure that [color is not the only way you convey information](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 
 ## Focus and hover states
@@ -41,35 +48,38 @@ The magic `outline: none;` will clear the default focus style from your link, bu
 
 ```css
 a {
-	color: var(--link);
-	outline: none;
-	&:is(:hover, :focus-visible) {
-		background-color: var(--accent);
-		color: var(--background);
-		text-decoration-color: var(--background);
-	}	
+  color: var(--link);
+  outline: none;
+  &:is(:hover, :focus-visible) {
+    background-color: var(--accent);
+    color: var(--background);
+    text-decoration-color: var(--background);
+  }
 }
 ```
 
 ### The "both" state
+
 If you're as finicky as me, though, it might annoy you that focused links don't do anything when you hover them! To solve that, we can come up with separate states for hover and focus which apply to separate parts of the styling. Here's what I have on my site:
+
 ```css
 a {
-	color: var(--link);
-	outline: none;
-	transition: text-decoration-thickness 0.3s;
-	&:focus-visible {
-		background-color: var(--accent);
-		color: var(--background);
-		text-decoration-color: var(--background);
-	}
-	&:hover {
-		text-decoration-thickness: 3px;
-	}
+  color: var(--link);
+  outline: none;
+  transition: text-decoration-thickness 0.3s;
+  &:focus-visible {
+    background-color: var(--accent);
+    color: var(--background);
+    text-decoration-color: var(--background);
+  }
+  &:hover {
+    text-decoration-thickness: 3px;
+  }
 }
 ```
 
 You can also specifically target the state where the link is focused and hovered, which is as simple as: `a:focus-visible:hover`. Get creative with your styles and transitions!
 
 ### Accessibility
+
 As previously noted, make sure your focus styles are very obvious, especially if you're setting `outline: none;`. Make sure the focus states are distinguishable from the non-focus states by [something other than color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).

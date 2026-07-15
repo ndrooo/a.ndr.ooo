@@ -6,7 +6,7 @@ Paragraph with
 [`code is link`](.)
 [link containing *italic*, **bold**, and ***bolditalic***](.)
 
-## Header2 containing a [link](.)
+## Header2 containing a [link](.) and `some code`
 
 Test test
 
