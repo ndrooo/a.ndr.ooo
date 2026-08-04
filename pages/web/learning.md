@@ -21,6 +21,7 @@ My growing collection of useful informational resources and writing about websit
 - [100 things you can do on your personal website](https://jamesg.blog/2024/02/19/personal-website-ideas)
 - [100 (more) things you can do with your personal website](https://jamesg.blog/2024/03/10/100-more-personal-website-ideas)
 - [Website Component Checklist](https://shellsharks.com/notes/2023/08/15/website-component-checklist)
+- [My website is a shifting house next to a river of knowledge. What could yours be?](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
 
 ## Other cool stuff
 - [The IndieWeb Wiki](https://indieweb.org/) - all sorts of information about making independent and personal websites
