@@ -1,4 +1,8 @@
+https://ndr.ooo https://a.ndr.ooo 301
+https://ndr.ooo/ https://a.ndr.ooo 301
 https://ndr.ooo/* https://a.ndr.ooo/:splat 301
+https://www.ndr.ooo https://a.ndr.ooo 301
+https://www.ndr.ooo/ https://a.ndr.ooo 301
 https://www.ndr.ooo/* https://a.ndr.ooo/:splat 301
 /A-pretty-good-web-accessibility-audit/ /accessibility/ 301
 /a11y-audit/ /accessibility/ 301
