@@ -1,53 +1,98 @@
 <footer>
-  <div class="webring">
-    <a href="https://pzone.ndr.ooo/androoo/prev" aria-label="Previous site in ring">&larr;</a>
-    <a href="https://pzone.ndr.ooo">Party Zone Webring</a>
-    <a href="https://pzone.ndr.ooo/androoo/next" aria-label="Next site in ring">&rarr;</a>
-  </div>
-  <div class="webring">
-    <a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=80">&larr;</a>
-    <a id="rc-ring-home" data-rc-uuid="341e85a4-6883-4967-b4ac-667a48d55bc2" href="https://ring.recurse.com/">The Recurse Webring</a>
-    <a id="rc-ring-rand" href="https://ring.recurse.com/rand">[Random site]</a>
-    <a id="rc-ring-next" href="https://ring.recurse.com/next?id=80">&rarr;</a>
-  </div>
-  <rc-scout></rc-scout>
-  <div class="grid-88x31">
-    <a-8831 src="queercoding.png" alt="you're telling me a queer coded this"></a-8831>
-    <a-8831 src="graphicdesign.png" alt="Frog clipart next to the phrase 'graphic design is my passion'"></a-8831>
-    <a-8831 src="brainmade.png" href="https://brainmade.org" alt="An icon of a sprout inside a head and the text 'brainmade.org'"></a-8831>
-    <a-8831 src="inat.png" href="https://www.inaturalist.org/people/androoo" alt="Logo for iNaturalist"></a-8831>
-    <a-8831 src="netscapebroken.png" alt="The Netscape broken image icon"></a-8831>
-  </div>
+    <div class="webring">
+        <a
+            href="https://pzone.ndr.ooo/androoo/prev"
+            aria-label="Previous site in ring"
+            >&larr;</a
+        >
+        <a href="https://pzone.ndr.ooo">Party Zone Webring</a>
+        <a
+            href="https://pzone.ndr.ooo/androoo/next"
+            aria-label="Next site in ring"
+            >&rarr;</a
+        >
+    </div>
+    <div class="webring">
+        <a id="rc-ring-prev" href="https://ring.recurse.com/prev?id=80"
+            >&larr;</a
+        >
+        <a
+            id="rc-ring-home"
+            data-rc-uuid="341e85a4-6883-4967-b4ac-667a48d55bc2"
+            href="https://ring.recurse.com/"
+            >The Recurse Webring</a
+        >
+        <a id="rc-ring-rand" href="https://ring.recurse.com/rand"
+            >[Random site]</a
+        >
+        <a id="rc-ring-next" href="https://ring.recurse.com/next?id=80"
+            >&rarr;</a
+        >
+    </div>
+    <rc-scout></rc-scout>
+    <div class="grid-88x31">
+        <a-8831
+            src="queercoding.png"
+            alt="you're telling me a queer coded this"
+        ></a-8831>
+        <a-8831
+            src="graphicdesign.png"
+            alt="Frog clipart next to the phrase 'graphic design is my passion'"
+        ></a-8831>
+        <a-8831
+            src="brainmade.png"
+            href="https://brainmade.org"
+            alt="An icon of a sprout inside a head and the text 'brainmade.org'"
+        ></a-8831>
+        <a-8831
+            src="inat.png"
+            href="https://www.inaturalist.org/people/androoo"
+            alt="Logo for iNaturalist"
+        ></a-8831>
+        <a-8831
+            src="netscapebroken.png"
+            alt="The Netscape broken image icon"
+        ></a-8831>
+        <a-8831
+            src="rc.png"
+            alt="The Recurse Center logo"
+            href="https://www.recurse.com/scout/click?t=9f3a0a3064d8c13d07a00e5414eace20"
+        ></a-8831>
+    </div>
 </footer>
 
-<script webc:keep src="https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js" type="text/javascript"></script>
+<script
+    webc:keep
+    src="https://raw.githack.com/Qwuke/recurse-ring/main/static/ring.js"
+    type="text/javascript"
+></script>
 
 <style webc:scoped>
-  :host footer {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: stretch;
-    align-content: center;
-  }
+    :host footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+        align-content: center;
+    }
 
-  :host footer > * {
-    margin-inline: auto;
-  }
+    :host footer > * {
+        margin-inline: auto;
+    }
 
-  :host a {
-    text-align: center;
-    min-inline-size: 2rem;
-  }
+    :host a {
+        text-align: center;
+        min-inline-size: 2rem;
+    }
 
-  :host .grid-88x31 {
-    background-color: var(--surface);
-    border: 3px outset var(--accent);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    max-width: 30rem;
-    padding: 0.5rem;
-  }
+    :host .grid-88x31 {
+        background-color: var(--surface);
+        border: 3px outset var(--accent);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        max-width: 30rem;
+        padding: 0.5rem;
+    }
 </style>
