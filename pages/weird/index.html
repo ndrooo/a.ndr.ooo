@@ -1,0 +1,26 @@
+---
+layout: base.webc
+override:tags: []
+title: Weird Web October | a.ndr.ooo
+---
+
+<h1>Weird Web October</h1>
+
+<p>
+    I am going to try to do the
+    <a href="https://weirdweboctober.website/">Weird Web October</a> challenge
+    and make an odd little website as many days as I can in October.
+</p>
+
+<h2>October 2026</h2>
+
+<ol>
+    <li webc:for="name of wwo2026">
+        <a
+            webc:if="getPage(name, collections.wwo)"
+            @text="name"
+            :href="getPage(name, collections.wwo).url"
+        ></a>
+        <span webc:else @text="name"></span>
+    </li>
+</ol>

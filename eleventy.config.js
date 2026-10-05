@@ -34,10 +34,16 @@ export default function (eleventyConfig) {
 
   dayjs.extend(advancedFormat);
   dayjs.extend(utc);
-  eleventyConfig.addFilter("niceDate", function(dateMillis) {
+  eleventyConfig.addFilter("niceDate", function (dateMillis) {
     const date = dayjs(dateMillis).utc();
     return `<time datetime="${isoDate(date)}">${niceDate(date)}</time>`;
-  })
+  });
+
+  eleventyConfig.addJavaScriptFunction("getPage", function (name, collection) {
+    return collection.find(
+      (page) => page.data.title.toLowerCase() === name.toLowerCase(),
+    );
+  });
 
   return {
     dir: {
@@ -56,5 +62,5 @@ function niceDate(dateObj) {
 }
 
 function isoDate(dateObj) {
-  return dateObj.format("YYYY-MM-DD")
+  return dateObj.format("YYYY-MM-DD");
 }
