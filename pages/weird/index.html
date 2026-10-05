@@ -14,7 +14,7 @@ title: Weird Web October | a.ndr.ooo
 
 <h2>October 2026</h2>
 
-<ol>
+<ol class="wwo-list">
     <li webc:for="name of wwo2026">
         <a
             webc:if="getPage(name, collections.wwo)"
@@ -24,3 +24,9 @@ title: Weird Web October | a.ndr.ooo
         <span webc:else @text="name"></span>
     </li>
 </ol>
+
+<style>
+    .wwo-list {
+        column-count: 2;
+    }
+</style>
