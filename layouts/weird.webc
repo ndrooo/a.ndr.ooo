@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title @text="title + ' | WWO | a.ndr.ooo'"></title>
+
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="stylesheet" href="../css/weird.css" />
+
+        <style webc:keep @raw="getBundle('css')"></style>
+
+        <meta webc:if="description" name="description" :content="description" />
+    </head>
+    <body>
+        <div class="content-box">
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <span @text="title"></span> |
+                            <a href="/weird">Weird Web October</a>
+                            <span @text="' ' + year + ' | '"></span>
+                            <a href="/">a.ndr.ooo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main @html="content"></main>
+        </div>
+        <script type="module" webc:keep @raw="getBundle('js')"></script>
+    </body>
+</html>
