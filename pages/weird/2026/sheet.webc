@@ -50,6 +50,18 @@ title: Sheet
         Array.from(target.children).forEach((child) => child.remove());
     }
 
+    function closeTop() {
+        const target = document.getElementById("sheets-target");
+        if (target.children.length > 0) {
+            target.children[target.children.length - 1].remove();
+            if (target.children.length > 0) {
+                target.children[target.children.length - 1]
+                    .getElementsByTagName("button")[0]
+                    .focus();
+            }
+        }
+    }
+
     function pickRandomColor() {
         const colors = ["red", "green", "blue", "yellow", "purple", "orange"];
         return colors[Math.floor(Math.random() * colors.length)];
@@ -82,11 +94,17 @@ title: Sheet
         ];
         return titles[Math.floor(Math.random() * titles.length)];
     }
+
+    document.body.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeTop();
+        }
+    });
 </script>
 
 <style>
     body {
-        font-family: 'Outfit', sans-serif;
+        font-family: "Outfit", sans-serif;
         a {
             color: #555;
         }
