@@ -7,6 +7,8 @@ description: Andrew Sherman's website
 
 I'm **Andrew**, a software developer and curious person in New York City. Learn more [about me](/about/#human), or contact me at [a@ndr.ooo](mailto:a@ndr.ooo).
 
+Happy [Weird Web October](/weird/)!
+
 {% assign latestPost = collections.post.last %}
 
 **Latest post:** [{{latestPost.data.title}}]({{latestPost.url}}) - {{latestPost.date | niceDate}}
