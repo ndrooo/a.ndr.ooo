@@ -6,7 +6,7 @@ title: Sheet
 <p>
     <a href="https://en.wikipedia.org/wiki/Modal_window">Sheet (Computing)</a>
 </p>
-<p>(Try clicking the first button and then holding enter)</p>
+<p>Click slowly, or try holding down enter.</p>
 <p>
     <button onclick="openSheet()">Open sheet</button>
 </p>
@@ -40,6 +40,9 @@ title: Sheet
         dialog.style.setProperty("top", x.toFixed(2) + "%");
         dialog.style.setProperty("left", y.toFixed(2) + "%");
         dialog.getElementsByTagName("h2")[0].innerText = pickRandomTitle();
+        if (target.children.length > 100) {
+            target.children[0].remove();
+        }
     }
 
     function reset() {
@@ -54,24 +57,24 @@ title: Sheet
 
     function pickRandomTitle() {
         const titles = [
-          "Buried ice blue",
-          "Fog in the valleys",
-          "Wilting aster",
-          "Surging waters",
-          "Periwinkle",
-          "Iridescent bird feather",
-          "Deep forest glow",
-          "Dragonfly wing",
-          "Burned retinas",
-          "Muddled paint",
-          "Sand below the ocean",
-          "Migraine aura",
-          "Peripheral vision gray",
-          "Chromatic aberration",
-          "Eye strain",
-          "Candlelight",
-          "Atmospheric scattering",
-          "Aurora borealis",
+            "Buried ice blue",
+            "Fog in the valleys",
+            "Wilting aster",
+            "Surging waters",
+            "Periwinkle",
+            "Iridescent bird feather",
+            "Deep forest glow",
+            "Dragonfly wing",
+            "Burned retinas",
+            "Muddled paint",
+            "Sand below the ocean",
+            "Migraine aura",
+            "Peripheral vision gray",
+            "Chromatic aberration",
+            "Eye strain",
+            "Candlelight",
+            "Atmospheric scattering",
+            "Aurora borealis",
         ];
         return titles[Math.floor(Math.random() * titles.length)];
     }
