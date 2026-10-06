@@ -82,6 +82,7 @@ title: Sheet
 
 <style>
     body {
+        font-family: 'Outfit', sans-serif;
         a {
             color: #555;
         }
