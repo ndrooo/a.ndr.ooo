@@ -74,7 +74,11 @@ title: Sheet
             "Eye strain",
             "Candlelight",
             "Atmospheric scattering",
-            "Aurora borealis",
+            "Magnetospheric plasma",
+            "The back of your eyelids",
+            "Fireworks smoke cloud",
+            "Faint haze",
+            "Absolute darkness",
         ];
         return titles[Math.floor(Math.random() * titles.length)];
     }
