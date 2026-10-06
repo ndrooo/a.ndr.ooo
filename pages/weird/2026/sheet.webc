@@ -1,0 +1,174 @@
+---
+title: Sheet
+---
+
+<h1>Sheets over sheets</h1>
+<p>
+    <a href="https://en.wikipedia.org/wiki/Modal_window">Sheet (Computing)</a>
+</p>
+<p>(Try clicking the first button and then holding enter)</p>
+<p>
+    <button onclick="openSheet()">Open sheet</button>
+</p>
+<template id="sheet-template">
+    <dialog popover="manual">
+        <h2>Sheet</h2>
+        <div class="stripes"></div>
+        <div class="cluster">
+            <button onclick="openSheet()">Again</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </dialog>
+</template>
+<div id="sheets-target"></div>
+
+<script webc:keep>
+    function openSheet() {
+        const template = document.getElementById("sheet-template");
+        const target = document.getElementById("sheets-target");
+        const sheet = document.importNode(template.content, true);
+        target.appendChild(sheet);
+        const dialog = target.children[target.children.length - 1];
+        dialog.showPopover();
+        dialog.style.setProperty("--sheet", pickRandomColor());
+        dialog.style.setProperty(
+            "--angle",
+            Math.random() > 0.5 ? "45deg" : "-45deg",
+        );
+        const x = Math.random() * 60 + 20;
+        const y = Math.random() * 60 + 20;
+        dialog.style.setProperty("top", x.toFixed(2) + "%");
+        dialog.style.setProperty("left", y.toFixed(2) + "%");
+        dialog.getElementsByTagName("h2")[0].innerText = pickRandomTitle();
+    }
+
+    function reset() {
+        const target = document.getElementById("sheets-target");
+        Array.from(target.children).forEach((child) => child.remove());
+    }
+
+    function pickRandomColor() {
+        const colors = ["red", "green", "blue", "yellow", "purple", "orange"];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function pickRandomTitle() {
+        const titles = [
+          "Buried ice blue",
+          "Fog in the valleys",
+          "Wilting aster",
+          "Surging waters",
+          "Periwinkle",
+          "Iridescent bird feather",
+          "Deep forest glow",
+          "Dragonfly wing",
+          "Burned retinas",
+          "Muddled paint",
+          "Sand below the ocean",
+          "Migraine aura",
+          "Peripheral vision gray",
+          "Chromatic aberration",
+          "Eye strain",
+          "Candlelight",
+          "Atmospheric scattering",
+          "Aurora borealis",
+        ];
+        return titles[Math.floor(Math.random() * titles.length)];
+    }
+</script>
+
+<style>
+    body {
+        a {
+            color: #555;
+        }
+    }
+
+    button {
+        background-color: white;
+        border: 2px solid black;
+        padding: 8px 16px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover,
+        &:focus-visible {
+            background-color: black;
+            color: white;
+        }
+        &:focus-visible {
+            outline: 2px dashed black;
+        }
+    }
+
+    header {
+        padding: 16px;
+        z-index: 100;
+        border-bottom: 2px solid black;
+    }
+
+    dialog {
+        --sheet: blueviolet;
+        --angle: 45deg;
+        margin: unset;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        height: 300px;
+        width: 400px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 16px;
+        gap: 16px;
+        &::backdrop {
+            background: oklch(from var(--sheet) l c h / 0.1);
+        }
+        .cluster {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: end;
+            gap: 8px;
+        }
+        h2 {
+            margin: 0;
+        }
+        .stripes {
+            border: 3px solid black;
+            flex-grow: 1;
+            margin-bottom: 4px;
+            background: repeating-linear-gradient(
+                var(--angle),
+                white,
+                white 8px,
+                black 8px,
+                black 11px
+            );
+        }
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 1.5rem;
+        > * {
+            margin: 0;
+        }
+    }
+
+    p5-canvas canvas {
+        border: 2px solid white;
+    }
+
+    p5-circle {
+        background: darkgray;
+    }
+</style>
