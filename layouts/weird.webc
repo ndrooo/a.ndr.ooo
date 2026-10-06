@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/fonts.css" />
         <link rel="stylesheet" href="../css/weird.css" />
         
-        <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://ndr.ooo" >
+        <link rel="preload" as="fetch" :href="'https://octothorp.es/?uri=https://a.ndr.ooo' + page.url" >
         <link rel="octo:octothorpes" href="weirdweboctober" >
         <link rel="octo:octothorpes" :href="title" >
 
