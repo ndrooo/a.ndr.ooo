@@ -45,6 +45,20 @@ export default function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addJavaScriptFunction(
+    "getNextWWOPage",
+    (name, wwo, collection) => {
+      return getWWOPageInDirection(name, wwo, collection, 1);
+    },
+  );
+
+  eleventyConfig.addJavaScriptFunction(
+    "getPrevWWOPage",
+    (name, wwo, collection) => {
+      return getWWOPageInDirection(name, wwo, collection, -1);
+    },
+  );
+
   return {
     dir: {
       input: "pages",
@@ -63,4 +77,29 @@ function niceDate(dateObj) {
 
 function isoDate(dateObj) {
   return dateObj.format("YYYY-MM-DD");
+}
+
+function getWWOPageInDirection(name, wwo, collection, direction) {
+  const currentIndex = wwo.findIndex(
+    (testName) => testName.toLowerCase() === name.toLowerCase(),
+  );
+  if (currentIndex === -1) return null;
+  for (
+    let i = currentIndex + direction;
+    i < wwo.length && i >= 0;
+    i = i + direction
+  ) {
+    const testName = wwo[i];
+    if (
+      collection.some(
+        (page) => page.data.title.toLowerCase() === testName.toLowerCase(),
+      )
+    ) {
+      const foundPage = collection.find(
+        (page) => page.data.title.toLowerCase() === testName.toLowerCase(),
+      );
+      return foundPage;
+    }
+  }
+  return null;
 }

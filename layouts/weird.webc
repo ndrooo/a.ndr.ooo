@@ -7,10 +7,14 @@
 
         <link rel="stylesheet" href="../css/fonts.css" />
         <link rel="stylesheet" href="../css/weird.css" />
-        
-        <link rel="preload" as="fetch" :href="'https://octothorp.es/?uri=https://a.ndr.ooo' + page.url" >
-        <link rel="octo:octothorpes" href="weirdweboctober" >
-        <link rel="octo:octothorpes" :href="title" >
+
+        <link
+            rel="preload"
+            as="fetch"
+            :href="'https://octothorp.es/?uri=https://a.ndr.ooo' + page.url"
+        />
+        <link rel="octo:octothorpes" href="weirdweboctober" />
+        <link rel="octo:octothorpes" :href="title" />
 
         <style webc:keep @raw="getBundle('css')"></style>
 
@@ -22,10 +26,32 @@
                 <nav>
                     <ul>
                         <li>
+                            <a
+                                webc:if="getPrevWWOPage(title, wwo2026, collections.wwo)"
+                                :href="getPrevWWOPage(title, wwo2026, collections.wwo).url"
+                            >
+                                &larr;
+                                <span
+                                    @text="getPrevWWOPage(title, wwo2026, collections.wwo).data.title"
+                                ></span>
+                            </a>
+                        </li>
+                        <li>
                             <span @text="title"></span> |
                             <a href="/weird">Weird Web October</a>
                             <span @text="' ' + year + ' | '"></span>
                             <a href="/">a.ndr.ooo</a>
+                        </li>
+                        <li>
+                            <a
+                                webc:if="getNextWWOPage(title, wwo2026, collections.wwo)"
+                                :href="getNextWWOPage(title, wwo2026, collections.wwo).url"
+                            >
+                                <span
+                                    @text="getNextWWOPage(title, wwo2026, collections.wwo).data.title"
+                                ></span>
+                                &rarr;
+                            </a>
                         </li>
                     </ul>
                 </nav>

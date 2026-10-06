@@ -18,6 +18,7 @@ header nav {
         justify-content: space-around;
         margin: 0;
         padding: 0;
+        gap: 8px;
         &:has(> :nth-child(2)) {
             justify-content: space-between;
         }
