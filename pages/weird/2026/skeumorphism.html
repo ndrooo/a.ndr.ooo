@@ -1,0 +1,159 @@
+---
+title: Skeumorphism
+description: "Skeumoji: Emojis which represent skeumorphic objects."
+---
+
+<h1>Skeumoji</h1>
+
+<p>
+    Emojis which represent
+    <a href="https://en.wikipedia.org/wiki/Skeuomorph">skeumorphic</a> objects -
+    that is to say objects which have ornamental features left over from
+    something which was at one point necessary or functional. It seems like
+    there are a lot of these, because many of the iconic qualities preserved in
+    skeumorphisms are the same iconic qualities that warrant an emoji. If you
+    come up with any others, <a href="mailto:a@ndr.ooo">let me know</a>!
+</p>
+
+<h2>Poodle</h2>
+<p>
+    <span class="bigmoji">🐩</span>
+    Dog breeds may be some of the few examples of a skeumorphic animal, and many
+    dog breeds have features which are now ornamental but originally had
+    specific functions. Their visually iconic pom-pom grooming shape is probably
+    the reason they are the only dog breed with an emoji, but it's also an
+    interesting skeumorphism.
+</p>
+<p>
+    The
+    <a href="https://en.wikipedia.org/wiki/Poodle#Clips_and_grooming"
+        >Continental clip</a
+    >
+    is the proper name for this pom-pom shape, and it comes from the days in
+    which a poodle was a
+    <a href="https://en.wikipedia.org/wiki/Water_dog">water dog</a> - a dog
+    meant to retrieve shot birds from water. The aim was to cut as much hair as
+    possible without exposing the most cold-sensitive body parts - top of the
+    head, tips of the ears, joints, upper chest. That meant the dog would not be
+    weighed down by so much wet fur while swimming, but would still be protected
+    from the cold water. Nowadays it just looks good on skirts.
+</p>
+
+<h2>Bagel</h2>
+<p>
+    <span class="bigmoji">🥯</span>
+    It's more like a partial or arguable skeumorphism, but the hole in a bagel
+    historically served two purposes:
+</p>
+<ol>
+    <li>
+        To allow for quicker and more even cooking, similar to a Bundt cake.
+    </li>
+    <li>
+        To allow it to be
+        <a
+            href="https://web.archive.org/web/20110822153619/http://www.nyc24.org/2002/issue01/story02/page03.asp"
+            >mounted on a rope or dowel</a
+        >
+        for easier transportation by street vendors.
+    </li>
+</ol>
+<p>
+    It's pretty uncommon these days to see a street vendor selling bagels,
+    though it's not entirely unheard of to see bagels on dowels in a deli or
+    cafe. The effects on baking time are certainly still relevant, but it seems
+    like the hole remains primarily because it's familiar.
+</p>
+
+<h2>Barber pole</h2>
+<p>
+    <span class="bigmoji">💈</span>
+    This one is a little bit grisly and dates back to the days of the
+    <a href="https://en.wikipedia.org/wiki/Barber_surgeon">barber surgeon</a>.
+    It also doesn't seem particularly well-substantiated so take it with a grain
+    of salt. To advertise their services pre-literacy, barber surgeons used a
+    sign which consisted of wash basins and a pole used in the blood-letting
+    process. This pole gained colors which corresponded to the various services
+    offered, and the spiral lines may have been related to the
+    <a href="https://en.wikipedia.org/wiki/Caduceus">Caduceus</a> or the
+    <a href="https://en.wikipedia.org/wiki/Rod_of_Asclepius">Rod of Asclepius</a
+    >, though that's mostly speculative. Regardless, most barbers don't perform
+    surgery anymore, but the form remains.
+</p>
+
+<h2>Carousel horse</h2>
+<p>
+    <span class="bigmoji">🎠</span>
+    A <em>Carrousel</em> was a type of 17th century equestrian tournament.
+    Wooden horses that were meant for practicing the games involved were
+    repurposed to become fairground amusements, and then these developed into
+    the painted, circular <em>Carousels</em> we're familiar with.
+</p>
+
+<style>
+    @font-face {
+        font-family: "Rosarivo";
+        font-style: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/Rosarivo-Regular.ttf");
+    }
+    @font-face {
+        font-family: "Rosarivo";
+        font-style: italic;
+        font-display: swap;
+        src: local(""), url("/fonts/Rosarivo-Italic.ttf");
+    }
+
+    @font-face {
+        font-family: "Cinzel";
+        font-style: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/Cinzel-VariableFont_wght.ttf");
+    }
+
+    body {
+        --bg: #f7ddb4;
+        --fg: #4c4336;
+        color: var(--fg);
+        background-color: var(--bg);
+        font-family: "Rosarivo", serif;
+    }
+
+    h1,
+    h2 {
+        font-family: "Cinzel", serif;
+    }
+
+    a {
+        color: #283087;
+    }
+
+    header {
+        background: var(--bg);
+        padding: 16px;
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+    }
+
+    main {
+        flex: 1;
+        max-inline-size: 60ch;
+        margin: 20px auto 100px;
+        padding-inline: 16px;
+
+        > :last-child {
+            margin-block-end: 100px;
+        }
+    }
+
+    .bigmoji {
+        float: left;
+        font-size: 3rem;
+        padding-inline-end: 10px;
+        text-shadow: 2px 4px 4px var(--fg);
+    }
+</style>
