@@ -16,6 +16,8 @@
         <link rel="octo:octothorpes" href="weirdweboctober" />
         <link rel="octo:octothorpes" :href="title" />
 
+        <meta webc:if="description" name="description" :content="description" />
+
         <style webc:keep @raw="getBundle('css')"></style>
 
         <meta webc:if="description" name="description" :content="description" />
