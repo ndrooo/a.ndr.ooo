@@ -1,0 +1,320 @@
+---
+title: Layers
+description: Layers of stickers to peel off your laptop.
+---
+
+<h1>Peel the stickers off the laptop!</h1>
+<div id="laptop">
+    <p>Magic word:<br />"<span id="magicword"></span>"</p>
+    <button disabled id="key" class="sticker" style="top: 110px; left: 234px">
+        <img class="main" src="/stickers/shrek.png" alt="A sticker of Shrek" />
+        <div class="back" inert>
+            <img src="/stickers/shrek.png" alt="" />
+        </div>
+        <div class="hover"></div>
+    </button>
+</div>
+<details>
+    <summary>All stickers</summary>
+    <p>Stickers are all CC0, feel free to use in your projects!</p>
+    <div id="stickers">
+        <img src="/stickers/hen.png" alt="A sticker of a white hen" />
+        <img src="/stickers/shrek.png" alt="A sticker of Shrek" />
+        <img src="/stickers/onion.png" alt="A sticker of an onion" />
+        <img src="/stickers/bricks.png" alt="A sticker of a brick wall" />
+        <img src="/stickers/cake.png" alt="A sticker of a slice of cake" />
+        <img
+            src="/stickers/eggbug.png"
+            alt="A sticker of Eggbug, the Cohost mascot"
+        />
+    </div>
+</details>
+
+<style>
+    @font-face {
+        font-family: "Sniglet";
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/Sniglet-Regular.ttf");
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Sniglet";
+    }
+
+    header {
+        border-bottom: 2px dashed black;
+
+        > * {
+            padding: 16px;
+            margin: 8px;
+        }
+
+        a {
+            color: black;
+            &:hover {
+                background-color: #ccc;
+            }
+            &:focus-visible {
+                outline: none;
+                background-color: black;
+                color: white;
+            }
+        }
+
+        a.button {
+            padding: 8px 12px;
+            border: 2px dashed black;
+            text-decoration: none;
+            display: block;
+            flex-shrink: 1;
+        }
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        min-block-size: 100vh;
+    }
+
+    main {
+        padding-block: 16px;
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    #laptop {
+        width: 600px;
+        height: 400px;
+        border-radius: 8px;
+        border: 3px solid #bbb;
+        box-shadow: 4px 4px 4px black;
+        background-color: #c5c5c5;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    details {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 8px;
+        > * {
+            text-align: center;
+            padding-inline: 8px;
+            margin: 0;
+        }
+        &:open {
+            border: 2px dashed black;
+            summary {
+                border: none;
+                border-bottom: 2px dashed black;
+            }
+        }
+        summary {
+            border: 2px dashed black;
+            padding: 8px;
+            cursor: pointer;
+            background-color: white;
+            &:hover {
+                background-color: #ccc;
+            }
+            &:focus-visible {
+                outline: 0;
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    img {
+        image-rendering: pixelated;
+    }
+
+    #stickers {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 400px;
+    }
+
+    button:not([disabled]) {
+        cursor: pointer;
+    }
+
+    .sticker {
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 128px;
+        height: 128px;
+        --peel: 0%;
+
+        img.main {
+            transition: clip-path 300ms;
+            clip-path: rect(auto calc(100% - var(--peel)) auto auto);
+        }
+
+        .back {
+            transition: transform 300ms;
+            clip-path: unset;
+            position: absolute;
+            transform: scaleX(-1) translateX(calc(2 * var(--peel) - 128px));
+            left: 0;
+            top: 0;
+            img {
+                clip-path: unset;
+                transition: clip-path 300ms;
+                clip-path: rect(auto auto auto calc(100% - var(--peel)));
+            }
+        }
+    }
+
+    .sticker:not([disabled]) {
+        &:is(:has(.hover:hover), :focus-visible) {
+            --peel: 30%;
+        }
+
+        &:focus-visible {
+            outline: 6px solid white;
+            background-color: black;
+        }
+
+        &.peel.peel {
+            --peel: 80%;
+        }
+
+        img.main {
+            filter: drop-shadow(2px 2px 0 black);
+        }
+
+        .hover {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            bottom: 5px;
+            right: 5px;
+        }
+    }
+</style>
+
+<script>
+    const numStickers = 35;
+    const stickers = document.getElementById("stickers").children;
+    const laptop = document.getElementById("laptop");
+    const rightBoundary = 600 - 128;
+    const bottomBoundary = 400 - 128;
+
+    for (let i = 0; i < numStickers; i++) {
+        const sticker = stickers[Math.floor(Math.random() * stickers.length)];
+        createSticker(sticker);
+    }
+
+    uncover();
+    Array.from(laptop.getElementsByClassName("sticker")).forEach((sticker) => {
+        sticker.addEventListener("click", peelSticker.bind(sticker));
+    });
+
+    function createSticker(sticker) {
+        const button = document.createElement("button");
+        button.classList.add("sticker");
+        const mainImage = sticker.cloneNode();
+        mainImage.classList.add("main");
+        button.appendChild(mainImage);
+        const back = document.createElement("div");
+        back.classList.add("back");
+        const stickerBack = sticker.cloneNode();
+        stickerBack.setAttribute("alt", "");
+        back.appendChild(stickerBack);
+        back.setAttribute("inert", "");
+        button.appendChild(back);
+        button.style.top =
+            Math.floor(Math.random() * bottomBoundary).toString() + "px";
+        button.style.left =
+            Math.floor(Math.random() * rightBoundary).toString() + "px";
+        button.setAttribute("disabled", "");
+        const hoverTarget = document.createElement("div");
+        hoverTarget.classList.add("hover");
+        button.appendChild(hoverTarget);
+        laptop.appendChild(button);
+    }
+
+    function peelSticker() {
+        if (this.id === "key") {
+            // No cheating!!!
+            document.getElementById("magicword").innerText = atob("U2hyZWs=");
+        }
+        this.classList.add("peel");
+        setTimeout(() => {
+            this.remove();
+            uncover();
+            focusFirstSticker();
+        }, 350);
+    }
+
+    function uncover() {
+        const stickers = Array.from(laptop.getElementsByClassName("sticker"));
+        for (let i = 0; i < stickers.length; i++) {
+            let hasOverlap = false;
+            const sticker = stickers[i];
+            if (i < stickers.length - 1) {
+                for (let j = i + 1; j < stickers.length; j++) {
+                    const dstSticker = stickers[j];
+                    if (overlaps(sticker, dstSticker)) {
+                        hasOverlap = true;
+                        break;
+                    }
+                }
+            }
+            if (hasOverlap) {
+                sticker.setAttribute("disabled", "");
+            } else {
+                sticker.removeAttribute("disabled");
+            }
+        }
+    }
+
+    function overlaps(e1, e2) {
+        const rect1 = e1.getBoundingClientRect();
+        const rect2 = e2.getBoundingClientRect();
+        const x1 = (rect1.left + rect1.right) / 2.0;
+        const y1 = (rect1.top + rect1.bottom) / 2.0;
+        const x2 = (rect2.left + rect2.right) / 2.0;
+        const y2 = (rect2.top + rect2.bottom) / 2.0;
+        const sqdist = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
+        return sqdist < Math.pow(105, 2);
+    }
+
+    function focusFirstSticker() {
+        const stickers = Array.from(laptop.getElementsByClassName("sticker"));
+        const next = stickers.find(
+            (sticker) => !sticker.hasAttribute("disabled"),
+        );
+        if (next) {
+            next.focus();
+        }
+    }
+</script>
