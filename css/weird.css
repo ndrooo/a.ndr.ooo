@@ -24,16 +24,13 @@ header nav {
             justify-content: space-between;
         }
         li {
-            flex: 3;
             display: block;
             list-style: none;
             text-align: center;
             &:first-child {
-                flex: 1;
                 text-align: left;
             }
             &:last-child {
-                flex: 1;
                 text-align: right;
             }
         }
