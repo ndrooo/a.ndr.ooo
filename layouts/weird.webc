@@ -17,6 +17,11 @@
         <link rel="octo:octothorpes" :href="title" />
 
         <meta webc:if="description" name="description" :content="description" />
+        <meta
+            webc:if="preview"
+            itemprop="image"
+            :content="'/previews/' + preview"
+        />
 
         <style webc:keep @raw="getBundle('css')"></style>
 

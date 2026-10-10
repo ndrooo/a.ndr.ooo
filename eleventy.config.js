@@ -22,6 +22,7 @@ export default function (eleventyConfig) {
     "static/fonts": "fonts",
     "static/88x31": "static/88x31",
     "static/stickers": "stickers",
+    "static/previews": "previews",
   });
 
   eleventyConfig.addWatchTarget("./css/");
