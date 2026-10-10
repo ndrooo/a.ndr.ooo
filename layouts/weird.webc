@@ -17,9 +17,21 @@
         <link rel="octo:octothorpes" :href="title" />
 
         <meta webc:if="description" name="description" :content="description" />
+
+        <meta property="og:type" :content="website" />
+        <meta property="og:url" :content="'https://a.ndr.ooo' + page.url" />
+        <meta
+            property="og:title"
+            :content="title + ' | Weird Web October | a.ndr.ooo'"
+        />
+        <meta
+            webc:if="description"
+            property="og:title"
+            :content="description"
+        />
         <meta
             webc:if="preview"
-            itemprop="image"
+            property="og:image"
             :content="'/previews/' + preview"
         />
 
