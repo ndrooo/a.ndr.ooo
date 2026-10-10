@@ -32,7 +32,7 @@
         <meta
             webc:if="preview"
             property="og:image"
-            :content="'/previews/' + preview"
+            :content="'https://a.ndr.ooo/previews/' + preview"
         />
 
         <style webc:keep @raw="getBundle('css')"></style>
