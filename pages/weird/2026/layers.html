@@ -5,7 +5,7 @@ description: Layers of stickers to peel off your laptop.
 
 <h1>Peel the stickers off the laptop!</h1>
 <div id="laptop">
-    <p>Magic word:<br />"<span id="magicword"></span>"</p>
+    <p id="secret">Magic word:<br />"<span id="magicword"></span>"</p>
     <button disabled id="key" class="sticker" style="top: 110px; left: 234px">
         <img class="main" src="/stickers/shrek.png" alt="A sticker of Shrek" />
         <div class="back" inert>
@@ -109,6 +109,10 @@ description: Layers of stickers to peel off your laptop.
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    #secret {
+        visibility: hidden;
     }
 
     details {
@@ -266,6 +270,7 @@ description: Layers of stickers to peel off your laptop.
         if (this.id === "key") {
             // No cheating!!!
             document.getElementById("magicword").innerText = atob("U2hyZWs=");
+            document.getElementById("secret").style.visibility = "visible";
         }
         this.classList.add("peel");
         setTimeout(() => {
