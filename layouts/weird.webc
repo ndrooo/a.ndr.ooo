@@ -80,5 +80,11 @@
             <main @raw="content"></main>
         </div>
         <script type="module" webc:keep @raw="getBundle('js')"></script>
+        <script
+            webc:keep
+            data-goatcounter="https://ndrooo.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+        ></script>
     </body>
 </html>
