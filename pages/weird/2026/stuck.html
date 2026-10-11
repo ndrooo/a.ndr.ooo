@@ -1,0 +1,295 @@
+---
+title: Stuck
+description: fjdskl
+---
+
+<h1>Release the sword <em>stuck</em> in the stone</h1>
+
+<div class="bigflex">
+    <form onsubmit="pull(); return false">
+        <details>
+            <summary>Need a hint?</summary>
+            <p>
+                To find the magic word, you must dig deeply among the
+                <a href="../layers">layers</a>.
+            </p>
+        </details>
+        <label>Magic word: <br><input type="text" id="magic" maxlength="8" /></label>
+    </form>
+
+    <button class="swordbutton" id="swordbutton" onclick="pull()">
+        <div id="swordstone">
+            <img id="sword" src="/sword.png" />
+            <div class="scrim"></div>
+            <img src="/stone.png" />
+            <div id="winphrase"></div>
+        </div>
+    </input>
+</div>
+
+<script webc:keep>
+    function pull() {
+        const inputEl = document.getElementById("magic");
+        const input = inputEl.value.toLowerCase();
+        // No peeking! Check the hint if you need it.
+        const magic = atob("U2hyZWs=").toLowerCase();
+        const swordstone = document.getElementById("swordstone");
+        if (input === magic) {
+            swordstone.classList.add("pull");
+            document.getElementById("winphrase").innerText = atob(
+                // No peeking! Check the hint if you need it.
+                "SGV5IG5vdywgeW91J3JlIGFuIEFsbC1TdGFyIQ==",
+            );
+            inputEl.setAttribute("disabled", "");
+            document.getElementById("swordbutton").setAttribute("disabled", "");
+        } else {
+            swordstone.classList.add("shake");
+            inputEl.value = "";
+            setTimeout(() => {
+                swordstone.classList.remove("shake");
+            }, 500);
+        }
+    }
+</script>
+
+<style>
+    @font-face {
+        font-family: "Crimson Pro";
+        font-style: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/CrimsonPro-VariableFont_wght.ttf");
+    }
+    @font-face {
+        font-family: "Crimson Pro";
+        font-style: italic;
+        font-display: swap;
+        src: local(""), url("/fonts/CrimsonPro-Italic-VariableFont_wght.ttf");
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        min-block-size: 100vh;
+        gap: 16px;
+    }
+
+    body {
+        background-color: #111;
+        color: #bbb;
+        font-family: "Crimson Pro", serif;
+    }
+
+    header {
+        font-size: 1.125rem;
+        padding: 16px;
+        a.button {
+            padding: 8px;
+        }
+    }
+
+    main {
+        padding-block: 16px;
+        flex: 1;
+        margin: 0 auto;
+        padding-inline: 8px;
+        font-size: 1.5rem;
+        max-width: 80ch;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-block: 4px;
+    }
+
+    .bigflex {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        > form {
+            flex-grow: 1;
+
+            > * {
+                max-width: 20rem;
+            }
+        }
+    }
+
+    a {
+        color: #ddd;
+        text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible, summary:focus-visible {
+        outline: 2px dashed #bbb;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+
+    input#magic {
+        background: none;
+        border: none;
+        border-bottom: 3px solid #bbb;
+        color: inherit;
+        font-size: 2.25rem;
+        max-width: 16rem;
+        font-family: unset;
+        padding: 8px;
+        padding-inline-start: 0;
+        text-transform: uppercase;
+        transition: all 3s, border 300ms;
+        margin-top: 0.5rem;
+        font-weight: 400;
+
+        &::selection {
+            background-color: #bbb;
+            color: #111;
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-bottom: 8px solid #bbb;
+        }
+
+        &[disabled] {
+            background-color: #ddd;
+            font-weight: 800;
+            color: #111;
+            font-size: 4rem;
+            letter-spacing: 0.5rem;
+            padding-inline-start: 12px;
+        }
+    }
+
+    details {
+        summary {
+            cursor: pointer;
+            padding-block: 8px;
+            margin-block: 10px;
+        }
+
+        p {
+            margin-top: 4px;
+        }
+    }
+
+    .swordbutton {
+        flex-shrink: 0;
+        display: block;
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        padding: 0;
+        margin: 0;
+
+        &:has(.pull) {
+            cursor: unset;
+        }
+
+        &:is(:hover, :focus-visible):not(:has(.pull)) #sword {
+            top: 235px;
+        }
+
+        &:focus-visible {
+            outline: 4px dashed #bbb;
+        }
+    }
+
+    #swordstone {
+        position: relative;
+        width: 256px;
+        height: 512px;
+        overflow-y: hidden;
+
+        &.shake {
+            animation: shake 0.25s;
+        }
+
+        > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .scrim {
+            bottom: 0;
+            background-color: #111;
+            top: unset;
+            width: 100%;
+            height: 40px;
+        }
+
+        #winphrase {
+            background-color: #111;
+            padding: 10px;
+            border: 4px solid #bbb;
+            border-radius: 4px;
+            margin-top: 140px;
+            color: #ddd;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 2s 6s ease-in;
+        }
+
+        &.pull #winphrase {
+            opacity: 1;
+        }
+
+        img {
+            image-rendering: pixelated;
+        }
+
+        &.pull #sword {
+            transition: top 2.5s 3s ease-in-out;
+            top: 0px;
+        }
+    }
+
+    #sword {
+        transition: top 400ms;
+        top: 240px;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+</style>
