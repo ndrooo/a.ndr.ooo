@@ -1,0 +1,104 @@
+---
+title: Pointy
+description: He brought you a flower!
+preview: wwo_pointy.png
+---
+
+<h1>He brought you a flower!</h1>
+
+<img src="/porcupine.png" alt="A porcupine offering you a small flower" />
+
+<p class="bottom">
+    <a href="https://commons.wikimedia.org/wiki/File:Porcupine-8474.jpg"
+        >Porcupic</a
+    >
+</p>
+
+<style>
+    @font-face {
+        font-family: "Fraunces";
+        font-style: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/Fraunces-SOFT,WONK,opsz,wght.ttf");
+    }
+
+    body {
+        background: #ffb3d4;
+        background: radial-gradient(
+            circle,
+            rgba(255, 179, 212, 1) 0%,
+            rgba(232, 230, 230, 1) 100%
+        );
+        font-family: "Fraunces", serif;
+        font-variation-settings:
+            "WONK" 1,
+            "SOFT" 100,
+            "opsz" 14;
+    }
+
+    a {
+        color: #442299;
+    }
+
+    header {
+        padding: 16px;
+        a.button {
+            padding: 8px;
+        }
+        background: #ffe0e8;
+        box-shadow: 0 4px 8px #22229933;
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        min-block-size: 100vh;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+    }
+
+    h1 {
+        opacity: 0;
+        animation-name: zoom-fade;
+        animation-delay: 2.5s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 1px hotpink;
+        text-align: center;
+    }
+
+    img {
+        opacity: 0;
+        image-rendering: pixelated;
+        max-width: 640px;
+        width: 100%;
+        animation-name: zoom-fade;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        filter: drop-shadow(0 0 2px black);
+    }
+
+    @keyframes zoom-fade {
+        from {
+            opacity: 0;
+            transform: scale(0.3);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .bottom {
+        position: absolute;
+        bottom: 8px;
+    }
+</style>
