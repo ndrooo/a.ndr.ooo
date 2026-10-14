@@ -1,0 +1,241 @@
+---
+title: Net
+description: Weirdweb Navigator 3.0
+---
+
+<div class="orb">
+    <div class="sunrise"></div>
+    <div class="ground-1"></div>
+    <span class="letter">W</span>
+    <div class="ground-2"></div>
+    <div class="specular-highlight"></div>
+    <div class="edge-shadow"></div>
+</div>
+<h1>Weirdweb</h1>
+<a class="a88x31" href="https://weirdweboctober.website"
+    ><img src="/static/88x31/weirdweb.png" alt="Weird Web October!"
+/></a>
+<details class="attributions">
+    <summary>Attributions & licensing</summary>
+    <p>
+        The 88x31 button above is made by me and licensed CC0, feel free to use
+        it in your projects!
+    </p>
+    <p>
+        "IBM PS/55" font by VileR -
+        <a href="https://int10h.org/oldschool-pc-fonts/"
+            >Oldschool PC Font Pack</a
+        >
+    </p>
+</details>
+
+<style>
+    @font-face {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/PlayfairDisplay-VariableFont_wght.ttf");
+    }
+
+    @font-face {
+        font-family: "PT Sans";
+        src: local(""), url("/fonts/PTSans-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "IBM PS/55";
+        src: local(""), url("/fonts/IBM-PS-55.ttf");
+    }
+
+    :root {
+        --teal: #357c77;
+        --ui-grey: #bbb;
+        --active: hsl(from blue h s calc(l - 15));
+        font-family: "IBM PS/55";
+    }
+
+    body {
+        font-size: 1.125rem;
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        min-block-size: 100vh;
+        background: var(--ui-grey);
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        color: var(--active);
+        &:focus-visible {
+            outline: 2px dotted var(--active);
+        }
+    }
+
+    h1 {
+        font-family: "PT Sans", sans-serif;
+        letter-spacing: 0.2px;
+        font-size: 2rem;
+        margin-block: 0.75rem;
+    }
+
+    header {
+        background: var(--ui-grey);
+        color: black;
+        padding: 16px;
+        border-bottom: 3px outset var(--ui-grey);
+        outline-bottom: 2px solid black;
+
+        ul {
+            gap: 8px;
+        }
+
+        a.button {
+            border: 3px outset hsl(from var(--ui-grey) h s calc(l + 15));
+            outline: 2px solid black;
+            border-radius: 2px;
+            padding: 4px;
+            color: black;
+            display: block;
+            &:focus-visible {
+                border: 3px inset hsl(from var(--ui-grey) h s calc(l + 15));
+                outline: 2px dotted var(--active);
+            }
+            &:hover {
+                border: 3px inset hsl(from var(--ui-grey) h s calc(l + 15));
+            }
+        }
+    }
+
+    .a88x31 {
+        margin-block: 0.6rem;
+        display: block;
+        border-radius: 2px;
+        &:hover {
+            outline: 3px solid black;
+        }
+
+        img {
+            display: block;
+            image-rendering: pixelated;
+            width: calc(88px * 1.25);
+            height: calc(31px * 1.25);
+        }
+    }
+
+    .attributions {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        border: 3px outset hsl(from var(--ui-grey) h s calc(l + 15));
+        max-width: 50%;
+        font-size: 0.875rem;
+
+        > * {
+            margin: 8px;
+        }
+
+        > :nth-child(2) {
+            margin-block-start: 6px;
+        }
+
+        summary {
+            margin: 0;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            &:focus-visible {
+                outline: 2px dotted var(--active);
+            }
+        }
+    }
+
+    .orb {
+        background: var(--teal);
+        padding: 1rem;
+        border-radius: 100%;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1;
+        width: 100px;
+    }
+
+    .ground-1 {
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        height: 40%;
+        background-color: black;
+        border-top: 0.125rem solid white;
+        border-top-left-radius: 100%;
+    }
+
+    .ground-2 {
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        right: -20%;
+        height: 40%;
+        background-color: black;
+        border-top: 0.125rem solid white;
+        border-top-right-radius: 100%;
+    }
+
+    .letter {
+        position: absolute;
+        color: white;
+        font-size: 4.5rem;
+        line-height: 1;
+        left: 17px;
+        top: 12px;
+        font-family: "Playfair Display", serif;
+    }
+
+    .sunrise,
+    .edge-shadow,
+    .specular-highlight {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .sunrise {
+        background: linear-gradient(
+            to top,
+            white,
+            transparent 50%,
+            transparent
+        );
+    }
+
+    .edge-shadow {
+        background: radial-gradient(
+            circle at center,
+            transparent 0,
+            transparent 60%,
+            black 78%,
+            black 100%
+        );
+    }
+
+    .specular-highlight {
+        background: radial-gradient(
+            circle at top,
+            #ffffff77 0,
+            #ffffff77 5%,
+            transparent 35%,
+            transparent 100%
+        );
+    }
+</style>
