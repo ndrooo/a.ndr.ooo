@@ -34,5 +34,8 @@ header nav {
                 text-align: right;
             }
         }
+        .spacer {
+            min-width: 8ch;
+        }
     }
 }
