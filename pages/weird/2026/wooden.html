@@ -1,0 +1,197 @@
+---
+title: Wooden
+description: Explore a tree trunk!
+preview: wwo_wooden.png
+---
+
+<h1>Explore a tree trunk!</h1>
+<div class="trunk">
+    <details class="cork">
+        <summary>Cork</summary>
+        <p>
+            What we think of when we think of "bark". A dead protective layer
+            that keeps the tree safe from many different threats. Takes many
+            forms: ridged, smooth, flaky, powdered.
+        </p>
+    </details>
+    <details class="cork-cambium">
+        <summary>Cork cambium</summary>
+        <p>
+            One of the two parts of the trunk that is actually growing. It
+            produces the cork to its outside and the cork skin to its inside.
+        </p>
+    </details>
+    <details class="cork-skin">
+        <summary>Cork skin</summary>
+        <p>
+            A live layer that can photosynthesize! Also known as the phelloderm.
+            When a tree trunk looks a little green, it's because the bark is
+            thin enough that the cork skin can still photosynthesize.
+        </p>
+    </details>
+    <details class="active-phloem">
+        <summary>Active phloem</summary>
+        <p>
+            One of the two highways of the trunk! Takes the sugars produced by
+            the leaves and moves them to the roots.
+        </p>
+    </details>
+    <details class="vascular-cambium">
+        <summary>Vascular cambium</summary>
+        <p>
+            The second of the two growing parts of the trunk. It produces phloem
+            to its outside and sapwood (or <em>xylem</em>) to its inside.
+        </p>
+    </details>
+    <details class="sapwood">
+        <summary>Sapwood</summary>
+        <p>
+            The "soft wood" of the trunk, also known as the <em>xylem</em>.
+            Brings water, minerals, and stored sugars up from the roots and
+            distributes them to the leaves!
+        </p>
+    </details>
+    <details class="heartwood">
+        <summary>Heartwood</summary>
+        <p>
+            As the sapwood ages it begins to die and fill up with defensive and
+            structural chemicals, becoming heartwood. Heartwood no longer
+            transports water or nutrients but now serves the purpose of
+            strengthening and supporting the tree.
+        </p>
+    </details>
+    <details class="pith">
+        <summary>Pith</summary>
+        <p>
+            The soft and spongy core of the trunk, usually very small in mature
+            trees. On young trees, small branches, and shoots, it seems to help
+            with storage, but in older trees it is just a vestige of that
+            earlier function.
+        </p>
+    </details>
+</div>
+
+<style>
+    @font-face {
+        font-family: "Crimson Pro";
+        font-style: normal;
+        font-display: swap;
+        src: local(""), url("/fonts/CrimsonPro-VariableFont_wght.ttf");
+    }
+    @font-face {
+        font-family: "Crimson Pro";
+        font-style: italic;
+        font-display: swap;
+        src: local(""), url("/fonts/CrimsonPro-Italic-VariableFont_wght.ttf");
+    }
+
+    :root {
+        font-family: "Crimson Pro";
+    }
+
+    header {
+        padding: 8px;
+        a.button {
+            padding: 8px;
+        }
+    }
+
+    body {
+        background: aliceblue;
+        font-size: 1.25rem;
+    }
+
+    .content-box {
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin: 2rem auto;
+    }
+
+    details {
+        border-top: 2px solid black;
+        padding-inline: 16px;
+        background: tan;
+        &:last-child {
+            border-bottom: 2px solid black;
+        }
+
+        > :nth-child(2) {
+            margin-top: 0;
+        }
+
+        > :last-child:not(summary) {
+            padding-bottom: 10px;
+        }
+
+        > * {
+            max-width: 55ch;
+            margin: 0 auto;
+            padding-inline: 16px;
+        }
+    }
+
+    summary {
+        cursor: pointer;
+        padding-block: 8px;
+    }
+
+    .cork {
+        background: #442500;
+        background: repeating-linear-gradient(
+            90deg,
+            rgba(48, 21, 3, 1) 0,
+            rgba(56, 38, 38, 1) 40px,
+            rgba(48, 21, 3, 1) 80px
+        );
+        color: white;
+    }
+    .cork-cambium {
+        background: #d9cd8b;
+    }
+    .cork-skin {
+        background: #e1f0a5;
+    }
+    .active-phloem {
+        background: papayawhip;
+    }
+    .vascular-cambium {
+        background: #dec976;
+    }
+    .sapwood {
+        background: repeating-linear-gradient(
+            0deg,
+            rgba(240, 194, 165, 1) 0,
+            rgba(186, 134, 104, 1) 12px
+        );
+        min-height: 170px;
+
+        > * {
+            background: rgba(240, 194, 165, 0.85);
+        }
+    }
+    .heartwood {
+        min-height: 130px;
+        color: white;
+        background: repeating-linear-gradient(
+            0deg,
+            rgba(120, 91, 77, 1) 0,
+            rgba(99, 55, 54, 1) 9px
+        );
+    }
+    .pith {
+        background: rgba(80, 40, 36, 1);
+        color: white;
+    }
+</style>
