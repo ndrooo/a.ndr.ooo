@@ -1,0 +1,91 @@
+---
+title: Branching
+description: "A poem"
+preview: wwo_branching.png
+---
+
+<img
+    src="/branching.png"
+    alt="View through a tree and spiderweb over an alpine marsh"
+/>
+<div class="center">
+    <p>searching earth and sky</p>
+    <p>tree is journey made solid</p>
+    <p>thought thrust into soil</p>
+</div>
+
+<style>
+    @font-face {
+        font-family: "Jersey";
+        src: url("/fonts/Jersey25-Regular.ttf");
+    }
+
+    body {
+        min-height: 100vh;
+        text-transform: lowercase;
+        background-color: black;
+        color: white;
+        font-family: "Jersey", sans-serif;
+        font-size: 1.25rem;
+    }
+
+    .content-box {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.85);
+        border-bottom: 2px solid black;
+        padding: 8px;
+        a.button {
+            padding: 8px;
+        }
+        a {
+            color: #96b06d;
+        }
+    }
+
+    main {
+        width: 100vw;
+        min-height: 100vh;
+        position: relative;
+
+        > * {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    }
+
+    img {
+        image-rendering: pixelated;
+        object-fit: cover;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        > * {
+            text-align: center;
+        }
+    }
+
+    p {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin: 0;
+        padding-inline: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 2px;
+    }
+</style>
