@@ -1,0 +1,7 @@
+<picture webc:if="animatedSrc">
+    <source :srcset="src" media="(prefers-reduced-motion: reduce)" />
+    <img :src="animatedSrc" :alt="alt" />
+</picture>
+<picture webc:else>
+    <img :src="src" :alt="alt" />
+</picture>

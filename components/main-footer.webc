@@ -32,6 +32,12 @@
     <rc-scout></rc-scout>
     <div class="grid-88x31">
         <a-8831
+            src="11ty-static.avif"
+            animated-src="11ty.avif"
+            alt="Built with Eleventy"
+            href="https://11ty.dev/"
+        ></a-8831>
+        <a-8831
             src="queercoding.png"
             alt="you're telling me a queer coded this"
         ></a-8831>
