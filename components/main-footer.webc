@@ -69,6 +69,11 @@
             alt="Octothorpes logo"
             href="https://octothorp.es/"
         ></a-8831>
+        <a-8831
+            src="weirdweb.png"
+            alt="Weird Web October!"
+            href="/weird"
+        ></a-8831>
     </div>
 </footer>
 
